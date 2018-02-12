@@ -26,9 +26,11 @@
 	var imgProfil = document.querySelector('.h__box__img');
 	var friends = document.querySelector('.friends');
 	var profil = document.querySelector('.profil');
+	var profilList = document.querySelector('.profil__list');
 
 	imgProfil.addEventListener('click', function() {
 		friends.classList.toggle('is-active-v');
 		profil.classList.toggle('is-active-v');
+		profilList.classList.toggle('is-active-w');
 	});
 
