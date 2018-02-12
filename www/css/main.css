@@ -23,8 +23,6 @@ body {
 
    overflow-x: hidden;
 
-   
-
    font-family: OpenSans-Regular;
 
 }
@@ -233,6 +231,63 @@ body {
       position: absolute;
       bottom: 0;
    }
+
+/* POST -----------------------------------------*/
+
+   .post {
+      background: #6F6F6F;
+      width: 100%;
+      height: 86vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .post__form h2 {
+      font-size: 1.5em;
+      margin: 10px 0;
+   }
+   .post__form__title {
+      width: 750px !important;
+   }
+   .post__form input {
+      margin: 0 auto;
+      width: 750px;
+      height: 20px;
+
+      border: 2px #5F5F5F solid;
+      padding: 5px;
+      margin-bottom: 25px;
+
+   }
+   .p__form__input__description {
+      width: 750px !important;
+      height: 250px !important;
+   }
+   .p__form__input__tags {
+      width: 500px !important;
+   }
+   .p__form__submit {
+      background: #5F5F5F;
+      color: white;
+      transition: all 0.25s;
+      width: 250px !important;
+      height: 34px !important;
+      cursor: pointer;
+
+
+      padding: 5px 10px !important;
+
+   }
+   .p__form__submit:hover {
+      background: #fff;
+      color: #5F5F5F;
+      border: 2px #5F5F5F solid;
+   }
+
+
+
+
+
 
 
 
