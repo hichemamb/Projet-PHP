@@ -1,0 +1,175 @@
+@font-face {
+      font-family: "OpenSans-Regular";
+       src: url('../fonts/OpenSans-Regular.ttf');
+   }
+   @font-face {
+      font-family: "JosefinSans-Bold";
+      src: url('../fonts/OpenSans-Bold.ttf');
+   }
+   @font-face {
+      font-family: "JosefinSans-SemiBold";
+      src: url('../fonts/OpenSans-SemiBold.ttf');
+   }
+   @font-face {
+      font-family: "JosefinSans-Light";
+      src: url('../fonts/OpenSans-Light.ttf');
+   }
+
+/* GLOBAL ---------------------------------------*/
+
+body {
+   background: #000;
+   color: #fff;
+
+   
+
+   font-family: OpenSans-Regular;
+
+}
+.DaBigBox {
+   display: flex;
+}
+.is-active {
+      display: flex !important;
+   }
+.is-active-v {
+   width: 25% !important;
+}
+
+/*HEADER ----------------------------------------*/
+   .header {
+      background: #bbb;
+
+      padding: 0 5% 0 5%;
+      height: 7vh;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .header__title {
+      font-size: 2em;
+   }
+   .header__box {
+      display: flex;
+      position: absolute;
+      right: 5%;
+      justify-content: flex-end;
+      align-items: center;
+   }
+   .h__box__img {
+      width: 33px;
+      height: auto;
+   }
+   .h__box__name {
+      margin: 0 10px;
+   }
+
+/* FRIENDS --------------------------------------*/
+
+   .friends {
+      background: #f4F4F4;
+      width: 0;
+      height: 86vh;
+   
+      transition: all 0.25s;
+   }
+   .friends__title {
+      color: #2F2F2F;
+      font-size: 2em;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+   }
+   .friends__list {
+      margin: 25px 25px 0;
+      height: 75%;
+      overflow: scroll;
+      overflow-x: hidden;
+   } 
+   .f__item {
+      padding: 25px 0;
+      display: flex;
+      align-items: center;
+   }
+   .f__item__name {
+      color: #7F7F7F;
+      font-size: 1.33em;
+      margin-left: 25px;
+   }
+   .f__item__img {
+      width: 50px;
+      height: auto;
+   }
+
+/* TABS -----------------------------------------*/
+   .mainList {
+      background: #5F5F5F;
+      width: 75%;
+   }
+   .mainList__list {
+      display: flex;
+   }
+   .mL__list__item {
+      color: #FFF;
+
+      width: 25%;
+      height: 5vh;
+
+      text-decoration: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: all 0.25s;
+   }
+   .mL__social {
+      background: #5F5F5F;
+   }
+   .mL__chat {
+      background: #6F6F6F;
+   }
+   .mL__forum {
+      background: #7F7F7F;
+   }
+   .mL__intranet {
+      background: #8F8F8F;
+   }
+   .tabs {
+      background: red;
+      height: 75vh;
+
+   }
+   
+   .tab {
+      width: 100%;
+      height: 81vh;
+      display: none;
+   }
+   .mL__list__item:hover {
+      background: #4F4F4F;
+   }
+
+/* PROFIL ---------------------------------------*/
+   .profil {
+      background: red;
+      width: 0;
+      height: 86vh;
+
+      transition: all 0.25s;
+   }
+
+/* FOOTER ---------------------------------------*/
+   .footer {
+      background: #bbb;
+
+      width: 100%;
+      height: 7vh;
+
+      position: absolute;
+      bottom: 0;
+   }
+
+
+
