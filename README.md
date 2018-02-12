@@ -1,2 +1,2 @@
 # SI-PHP
-Work: build a web animation with front &amp; back, in a week
+> Work: build a web application with front & back, in a week
