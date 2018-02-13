@@ -16,23 +16,10 @@
 			<a href="index.php" class="h__box__cross"></a>
 		</div>
 		</header>
-	<section class="post">
-		<form action="" class="post__form">
-			<h2 class="p__form__title">Titre :</h2>
-			<input type="text" class="p__form__input__title" placeholder="Ex: Mon super titre">
-			<h2 class="p__form__description" placeholder="Mon super titre">Description :</h2>
-			<input type="text" class="p__form__input__description" placeholder="Ex: Ma super description">
-			<h2 class="p__form__tags">Tags :</h2>
-			<input type="text" class="p__form__input__tags" placeholder="Ex: PHP, Hagrid">
-			<input type="submit" class="p__form__submit">
-		</form>
-	</section>
-	<footer class="footer">
+		<footer class="footer">
 			<p class="footer__text">© Multiforme 2018 </p>
 			<p class="footer__text">Created by <a href="https://github.com/ShAd0wInK" class="f__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="f__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="f__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="f__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="f__text__link>Fabien MARQUES</a></p>
 			<img src="img/logo.svg" alt="logo footer" class="footer__img">
 		</footer>
-<div class="h__box__img"></div>
 </body>
-<script src="js/script.js"></script>
 </html>

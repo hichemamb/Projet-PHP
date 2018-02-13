@@ -6,14 +6,14 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="icon" href="img/icon.png">
 
-		<title>KHAFQ.issou</title>
+		<title>Multiforme, votre plateforme multifonctionelle</title>
 	</head>
 	<body>
 		<header class="header">
-			<h1 class="header__title">KHAFQ.issou</h1>
+			<img src="img/title.svg" class="header__title">
 			<p class="header__description">Votre plateforme multifonction</p>
 			<div class="header__box">
-				<p class="h__box__name">Bonjour, <span>inconnu</span></p>
+				<p class="h__box__name">Bonjour, <a href="login.php">inconnu</a></p>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
 			</div>
 		</header>
@@ -120,14 +120,16 @@
 			<section class="profil">
 				<h2 class="profil__title">Inconnu</h2>
 				<ul class="profil__list">
-					<li class="p__list__item">Mes information</li>
+					<a href="infos.php" class="p__list__item">Mes information</a>
 					<li class="p__list__item">Mes favoris</li>
 					<li class="p__list__item">Se déconnecter</li>
 				</ul>
 			</section>
 		</section>
 		<footer class="footer">
-			
+			<p class="footer__text">© Multiforme 2018 </p>
+			<p class="footer__text">Created by <a href="https://github.com/ShAd0wInK" class="f__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="f__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="f__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="f__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="f__text__link">Fabien MARQUES</a></p>
+			<img src="img/logo.svg" alt="logo footer" class="footer__img">
 		</footer>
 	</body>
 	<script src="js/script.js"></script>
