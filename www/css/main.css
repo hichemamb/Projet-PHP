@@ -326,11 +326,14 @@
       font-size: 1em;
    }
    .social__description {
-      margin: 15px 0 15px 25px;
+      margin: 15px 0 5px 25px;
 
       font-size: 1em;
       font-family: OpenSans-Light;
       line-height: 1.5;
+   }
+   .s__box__link__box {
+      margin-bottom: 25px;
    }
    .s__box__link {
       color: #70EFC7;
@@ -360,22 +363,57 @@
       background: url(../img/like.svg);
    }
    .s__box__form {
-      padding: 25px;
+      padding: 0 25px;
+      display: none;
+      flex-direction: column;
+   }
+   .comments {
+    /* padding: 15px 1px 15px 12px; */
+        margin: 0 0px 0px 25px;
+        display: none;
+        flex-direction: column;
+   }
+   .comment {
+          background: #EDF6FD;
+    padding: 15px;
+    margin-bottom: 15px;
+   }
+   .comment__user {
+      font-size: 1.5em;
+   }
+   .comment__description {
+      font-family: OpenSans-Light;
+      margin-top: 5px;
+   }
+   .s__box__form__title {
+      margin: 0 22px 15px;
+      color: #20334C;
+      font-family: OpenSans-SemiBold;
+
+      font-size: 1.5em;
+   }
+   .
+   .s__box__form__triangle {
+      cursor: pointer;
    }
    .s__box__form__message {
+      background: #EDF6FD;
       border: 2px #20334C solid;
-      width: 250px;
-      padding-bottom: 100px;
+      width: 100%;
+      padding: 10px;
+      padding-bottom: 50px;
       font-size: 0.9em;
+      font-family: OpenSans-Light;
 
    }
    .s__box__form__submit {
       background: rgba(112,239,199, 0.2);
       color: #20334C;
 
-      width: 250px !important;
+      width: 175px !important;
       height: 34px !important;
       padding: 5px 10px !important;
+      margin-top: 5px;
 
       font-size: 1em;
       font-family: OpenSans-SemiBold;
@@ -387,6 +425,9 @@
       cursor: pointer;
       border: 2px #20334C solid;
       transition: all 0.25s;
+   }
+   .s__box__form__submit:hover {
+      background: #70EFC7;
    }
 
 /* PROFIL ---------------------------------------*/
@@ -588,6 +629,9 @@
    }
    ::-webkit-scrollbar-thumb:hover {
          background: #20334C; 
+   }
+   .triangle_change {
+      transform: rotate(180deg);
    }
 
 

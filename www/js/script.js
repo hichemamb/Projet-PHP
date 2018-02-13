@@ -36,7 +36,18 @@
 
 // BUTTONS --------------------------------------
 
-
+// COMMENTS -------------------------------------
+	var triangle = document.querySelectorAll('.s__box__form__triangle');
+		comment = document.querySelector('.s__box__form');
+		comments = document.querySelector('.comments')
+		for (var i = 0; i < triangle.length; i++) {
+			triangle[i].addEventListener('click', function() {
+				comment.classList.toggle('is-active');
+				comments.classList.toggle('is-active');
+				triangle[i].classList.toggle('triangle_change');
+			});
+		}
+ 
 // LOGIN
 	var tabsLink = document.querySelectorAll('.p__tabs__link');
 	var postForm = document.querySelectorAll('.post__form');
