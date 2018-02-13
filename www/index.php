@@ -85,22 +85,100 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
 										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
 
 									</div>
+									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
+									
+									<div class="comments">
+										<div class="comment">
+											<h3 class="comment__user">Javashit</h3>
+											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+										</div>
+										<div class="comment">
+											<h3 class="comment__user">Javashit</h3>
+											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+										</div>
+									</div>
 									<form action="" class="s__box__form">
-										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow"><br>
+										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
 										<input type="submit" value="ENVOYER" class="s__box__form__submit">
 									</form>
 									
+									
 								</div>
 							</div>
+							<div class="social__post">
+								<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
+								<div class="s__box">
+									<h3 class="s__box__title">Le PHP, une histoire d'installation</h3>
+									<p class="s__box__user">ImBackEndDesigner</p>
+									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
-							
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<div class="s__box__buttons">
+										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
 
+									</div>
+									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
+									
+									<div class="comments">
+										<div class="comment">
+											<h3 class="comment__user">Javashit</h3>
+											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+										</div>
+										<div class="comment">
+											<h3 class="comment__user">Javashit</h3>
+											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+										</div>
+									</div>
+									<form action="" class="s__box__form">
+										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
+										<input type="submit" value="ENVOYER" class="s__box__form__submit">
+									</form>
+									
+									
+								</div>
+							</div>
+							<div class="social__post">
+								<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
+								<div class="s__box">
+									<h3 class="s__box__title">Le PHP, une histoire d'installation</h3>
+									<p class="s__box__user">ImBackEndDesigner</p>
+									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
+
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<div class="s__box__buttons">
+										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
+
+									</div>
+									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
+									
+									<div class="comments">
+										<div class="comment">
+											<h3 class="comment__user">Javashit</h3>
+											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+										</div>
+										<div class="comment">
+											<h3 class="comment__user">Javashit</h3>
+											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+										</div>
+									</div>
+									<form action="" class="s__box__form">
+										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
+										<input type="submit" value="ENVOYER" class="s__box__form__submit">
+									</form>
+									
+									
+								</div>
+							</div>
 						</section>
 						<section class="social__create">
 							<p class="s__create__text">Vous voulez partager une idée ? <a href="createpost.php" class="s__create__link">POSTER</a></p>
