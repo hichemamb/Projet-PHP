@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="icon" href="img/icon.png">
+
 		<title>Multiforme, votre plateforme multifonctionelle</title>
 	</head>
 	<body>
@@ -45,11 +46,13 @@
 			
 		</section>
 		<footer class="footer">
-			<p class="footer__text">© Multiforme 2018 </p>
-			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="f__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="f__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="f__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="f__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="f__text__link">Fabien MARQUES</a> à <a href="http://hetic.net" class="f__text__link">HÉTIC</a>.</p>
+			<p class="footer__text__first">© Multiforme 2018 </p>
+			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link">HÉTIC</a>.</p>
 			<img src="img/logo.svg" alt="logo footer" class="footer__img">
 		</footer>
 		<div class="h__box__img" style="display: none"></div>
 	</body>
 	<script src="js/script.js"></script>
 </html>
+
+

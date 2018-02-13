@@ -13,7 +13,7 @@
 			<img src="img/title.svg" class="header__title">
 			<p class="header__description">Votre plateforme multifonction</p>
 			<div class="header__box">
-				<a href="login.php" class="h__box__name">Déconnecté</a>
+				<a href="login.php" class="h__box__name">Se connecter</a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
 			</div>
 		</header>
@@ -86,31 +86,28 @@
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
 									<div class="s__box__buttons">
+										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
+
+									</div>
+								</div>
+							</div>
+
+							<div class="social__post">
+								<img src="img/profil.svg" alt="post profil img" class="s__post__img">
+								<div class="s__box">
+									<h3 class="s__box__title">Title</h3>
+									<p class="s__box__user">User</p>
+									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
+
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
+									<div class="s__box__buttons">
 										<div src="img/fav.svg" alt="fav button" class="s__box__fav">
 										<div src="img/like.svg" alt="like button" class="s__box__like">
 									</div>
 								</div>
 							</div>
-							<div class="social__post">
-								<img src="img/profil.svg" alt="post profil img" class="s__post__img">
-								<div class="s__box">
-									<h3 class="s__box__title">Title</h3>
-									<p class="s__box__user">User</p>
-									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-								</div>
-							</div>
-							<div class="social__post">
-								<img src="img/profil.svg" alt="post profil img" class="s__post__img">
-								<div class="s__box">
-									<h3 class="s__box__title">Title</h3>
-									<p class="s__box__user">User</p>
-									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
-
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-								</div>
-							</div>
 						</section>
 						<section class="social__create">
 							<p class="s__create__text">Vous voulez partager une idée ? <a href="createpost.php" class="s__create__link">POSTER</a></p>
@@ -131,8 +128,8 @@
 			</section>
 		</section>
 		<footer class="footer">
-			<p class="footer__text">© Multiforme 2018 </p>
-			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="f__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="f__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="f__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="f__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="f__text__link">Fabien MARQUES</a> à <a href="http://hetic.net" class="f__text__link">HÉTIC</a>.</p>
+			<p class="footer__text__first">© Multiforme 2018 </p>
+			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link">HÉTIC</a>.</p>
 			<img src="img/logo.svg" alt="logo footer" class="footer__img">
 		</footer>
 	</body>
