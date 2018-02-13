@@ -71,15 +71,15 @@
       width: auto;
    }
    #colors {
-      deepBlue: #1E2E45;
-      blue: #396387;
-      lightBlue: #81E1E1;
+      deepBlue: #162233;
+      blue: #20334C;
+      lightBlue: #5CDBDB;
       xlightBlue: #EDF6FD;
    }
 
 /*HEADER ----------------------------------------*/
    .header {
-      background: #1E2E45;
+      background: #162233;
 
       height: 10vh;
       padding: 0 2% 0 2%;
@@ -110,14 +110,14 @@
    }
    .h__box__name {
       margin: 0 10px;
-      color: #81E1E1;
-      border-bottom: 2px #1E2E45 solid;
+      color: #5CDBDB;
+      border-bottom: 2px #162233 solid;
 
       transition: all 0.25s;
    }
    .h__box__name:hover {
       color: #fff;
-      border-bottom: 2px #81E1E1 solid;
+      border-bottom: 2px #5CDBDB solid;
    }
    .h__box__cross {
       width: 50px;
@@ -131,7 +131,7 @@
    }
    .h__box__cross:before {
       content:'';
-      background: #81E1E1;
+      background: #5CDBDB;
 
       width: 50px;
       height: 3px;
@@ -144,7 +144,7 @@
    .h__box__cross:after {
 
       content:'';
-      background: #81E1E1;
+      background: #5CDBDB;
 
       width: 50px;
       height: 3px;
@@ -165,7 +165,7 @@
       transition: all 0.25s;
    }
    .friends__title {
-      color: #396387;
+      color: #20334C;
 
       padding: 10px;
 
@@ -227,16 +227,16 @@
       transition: all 0.25s;
    }
    .mL__social {
-      background: #26547C;
+      background: #20334C;
    }
    .mL__chat {
-      background: #396387;
+      background: #2B4466;
    }
    .mL__forum {
-      background: #4D7393;
+      background: #304B72;
    }
    .mL__intranet {
-      background: #61829F;
+      background: #35547F;
    }
    .tabs {
       background: red;
@@ -263,7 +263,7 @@
       display: flex;
    }
    .social__create {
-      background: #396387;
+      background: #2B4466;
 
       width: 100%;
       height: 7vh;
@@ -273,7 +273,7 @@
       align-items: center;
    }
    .social__overflow {
-      background: #396387;
+      background: #3F5169;
       height: 62vh;
       margin: 25px 15px 25px 25px;
 
@@ -290,12 +290,12 @@
       padding: 2.5px 10px;
       margin: 0 10px;
 
-      border: 2px #81E1E1 solid;
+      border: 2px #5CDBDB solid;
 
       transition: all 0.25s;
    }
    .s__create__link:hover {
-      background: #81E1E1   
+      background: #5CDBDB   
    }
    
    .s__box {
@@ -345,7 +345,7 @@
 
 /* PROFIL ---------------------------------------*/
    .profil {
-      background: #1E2E45;
+      background: #162233;
 
       width: 0;
       height: 86vh;
@@ -354,7 +354,7 @@
    }
    .profil__title {
       padding: 10px 50px 20px;
-      color: #396387;
+      color: #35547F;
       font-size: 2em;
       text-align: right;
    }
@@ -362,7 +362,7 @@
       margin: 10px 0 0;
    }
    .p__list__item {
-      color: #fff;
+      color: #5CDBDB;
 
       margin: 50px;
 
@@ -374,13 +374,13 @@
       transition: all 0.25s;
    }
    .p__list__item:hover {
-      color: #1F1F1F;
+      color: #fff;
    }
 
 
 /* FOOTER ---------------------------------------*/
    .footer {
-      background: #1E2E45;
+      background: #162233;
       color: #fff;
 
       width: 100%;
@@ -398,21 +398,21 @@
       bottom: 0;
    }
    .footer__text__first {
-      color: #396387;
+      color: #35547F;
       font-size: 1.5em;
       font-family: OpenSans-SemiBold;
    }
    .foo__text__link {
-      color: #81E1E1;
+      color: #5CDBDB;
 
       font-family: OpenSans-Regular;
-      border-bottom: 1px #1E2E45 solid;
+      border-bottom: 1px #162233 solid;
       transition: all 0.25s;
    }
    .foo__text__link:hover {
       color: #fff;
 
-      border-bottom: 1px #81E1E1 solid;
+      border-bottom: 1px #5CDBDB solid;
    }
    .footer__img {
       margin-right: 4%;
@@ -432,7 +432,7 @@
    }
    .post__form h2 {
       margin: 5px 0;
-      color: #396387;
+      color: #20334C;
       font-family: OpenSans-SemiBold;
 
       font-size: 1.5em;
@@ -440,6 +440,7 @@
    .post__form {
       padding: 0 15px;
       display: none;
+      height: 65vh;
       flex-direction: column;
       justify-content: flex-start;
    }
@@ -458,7 +459,7 @@
       display: flex;
       justify-content: flex-start;
 
-      border: 2px #396387 solid;
+      border: 2px #20334C solid;
 
    }
    .post__tabs {
@@ -482,7 +483,7 @@
       height: 150px !important;
    }
    .p__form__input__tags {
-      width: 500px !important;
+      width: 490px !important;
    }
    .p__form__input__id {
       width: 500px !important;
@@ -494,14 +495,15 @@
       width: 500px !important;
    }
    .p__form__submit {
-      background: #5F5F5F;
-      color: white;
+      background: rgba(88,213,211, 0.5);
+      color: #20334C;
 
       width: 250px !important;
       height: 34px !important;
       padding: 5px 10px !important;
 
       font-size: 1em;
+      font-family: OpenSans-SemiBold;
 
       display: flex;
       justify-content: center !important;
@@ -512,8 +514,8 @@
       transition: all 0.25s;
    }
    .p__form__submit:hover {
-      background: #fff;
-      color: #5F5F5F;
+      background: #58D5D3;
+      color: #20334C;
       
       border: 2px #5F5F5F solid;
    }
@@ -521,10 +523,10 @@
       display: flex;
    }
    .signup {
-      background: #2F2F2F;
+      background: #e0f1ff;
    }
    .signin {
-      background: #5F5F5F;
+      background: #cee9ff;
    }
 
 
@@ -535,11 +537,11 @@
          background: rgba(2,2,2,0.1); 
    }
    ::-webkit-scrollbar-thumb {
-         background: #1E2E45; 
+         background: #162233; 
          transition: all 0.3s;
    }
    ::-webkit-scrollbar-thumb:hover {
-         background: #396387; 
+         background: #20334C; 
    }
 
 

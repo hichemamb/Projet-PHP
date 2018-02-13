@@ -22,47 +22,47 @@
 				<h2 class="friends__title">Ami(e)s :</h2>
 				<ul class="friends__list">
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 					<li class="f__item">
-						<img src="img/profil.svg" alt="profil pciture" class="f__item__img">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
 				</ul>
@@ -121,7 +121,7 @@
 			<section class="profil">
 				<h2 class="profil__title">Inconnu</h2>
 				<ul class="profil__list">
-					<a href="infos.php" class="p__list__item">Mes information</a>
+					<a href="infos.php" class="p__list__item">Mes informations</a>
 					<li class="p__list__item">Mes favoris</li>
 					<a href="index/php" class="p__list__item">Se déconnecter</a>
 				</ul>
