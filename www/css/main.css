@@ -315,11 +315,15 @@
       align-items: flex-start;
       justify-content: flex-end;
    }
-   .s__box__buttons img {
+   .s__box__buttons {
       width: 35px;
       height: auto;
       margin-right: 12.5px;
    }
+   .s__box__like {
+      background: url(../img/linke);
+   }
+
 
 /* PROFIL ---------------------------------------*/
    .profil {
