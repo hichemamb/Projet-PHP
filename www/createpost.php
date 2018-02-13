@@ -27,7 +27,7 @@
 				<h2 class="p__form__tags">Tags :</h2>
 				<div class="p__form__box">
 					<input type="text" class="p__form__input__tags" placeholder="Ex: PHP, Hagrid">
-					<input type="submit" class="p__form__submit">
+					<input type="submit" value="VALIDER" class="p__form__submit">
 				</div>
 			</form>
 		</section>
