@@ -1,4 +1,4 @@
-# SI-PHP
+# Multiforme
 > Work: build a web application with front & back, in a week
 
 ### Our team :
