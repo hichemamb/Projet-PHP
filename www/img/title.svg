@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="195px" height="29px" viewBox="0 0 195 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="188px" height="29px" viewBox="0 0 188 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
     <title>title</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="title" transform="translate(2.000000, -10.000000)">
-            <path d="M0.5,31.5 L32.5,31.5" id="Line" stroke="#979797" stroke-width="5" stroke-linecap="square"></path>
-            <g id="Multiform" fill="#282828" font-size="36">
-                <text id="M" font-family="OpenSans-Bold, Open Sans" font-weight="bold">
+        <g id="title" transform="translate(0.000000, -10.000000)">
+            <path d="M2.5,31.5 L31.5,31.5" id="Line" stroke="#FFFFFF" stroke-width="5" stroke-linecap="square"></path>
+            <g id="Multiform" font-size="36">
+                <text id="M" font-family="OpenSans-Bold, Open Sans" font-weight="bold" fill="#81E1E1">
                     <tspan x="0" y="38">M</tspan>
                 </text>
-                <text id="ultiforme" font-family="OpenSans, Open Sans" font-weight="normal">
-                    <tspan x="39.3343635" y="38">ultiforme</tspan>
+                <text id="ultiforme" font-family="OpenSans, Open Sans" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="34" y="38">ultiforme</tspan>
                 </text>
             </g>
         </g>
