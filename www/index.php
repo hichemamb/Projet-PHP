@@ -13,7 +13,7 @@
 			<img src="img/title.svg" class="header__title">
 			<p class="header__description">Votre plateforme multifonction</p>
 			<div class="header__box">
-				<p class="h__box__name">Bonjour, <a href="login.php">inconnu</a></p>
+				<a href="login.php" class="h__box__name">Déconnecté</a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
 			</div>
 		</header>
@@ -85,6 +85,10 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
+									<div class="s__box__buttons">
+										<div src="img/fav.svg" alt="fav button" class="s__box__fav">
+										<div src="img/like.svg" alt="like button" class="s__box__like">
+									</div>
 								</div>
 							</div>
 							<div class="social__post">

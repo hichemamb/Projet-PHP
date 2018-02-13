@@ -255,6 +255,13 @@
       display: flex;
       align-items: center;
    }
+   .social__overflow {
+      background: #5B5B5B;
+      height: 62vh;
+      margin: 25px 15px 25px 25px;
+
+      overflow-x: hidden;
+   }
    .s__create__text {
       font-size: 1.25em;
       text-decoration: none;
@@ -272,12 +279,7 @@
    .s__create__link:hover {
       background: #bbb;
    }
-   .social__overflow {
-      height: 62vh;
-      margin: 25px 15px 25px 25px;
-
-      overflow-x: hidden;
-   }
+   
    .s__box {
       display: flex;
       flex-direction: column;
@@ -307,6 +309,16 @@
       font-size: 1.25em;
       font-family: OpenSans-Light;
       line-height: 1.5;
+   }
+   .s__box__buttons {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+   }
+   .s__box__buttons img {
+      width: 35px;
+      height: auto;
+      margin-right: 12.5px;
    }
 
 /* PROFIL ---------------------------------------*/
@@ -381,6 +393,7 @@
       height: 86vh;
 
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
    }
@@ -388,6 +401,12 @@
       margin: 10px 0;
 
       font-size: 1.5em;
+   }
+   .post__form {
+      padding: 0 15px;
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
    }
    .post__form__title {
       width: 750px !important;
@@ -400,13 +419,40 @@
       border: 2px #5F5F5F solid;
       padding: 5px;
       margin-bottom: 25px;
+      display: flex;
+      justify-content: flex-start;
 
+   }
+   .post__tabs {
+      width: 544px;
+      height: 5vh;
+      background: red;
+      display: flex;
+      justify-content: space-between;
+
+   }
+   .p__tabs__link {
+      width: 50%;
+      height: 5vh;
+      background: green;
+      display: flex;
+      justify-content: center; 
+      align-items: center;
    }
    .p__form__input__description {
       width: 750px !important;
-      height: 250px !important;
+      height: 150px !important;
    }
    .p__form__input__tags {
+      width: 500px !important;
+   }
+   .p__form__input__id {
+      width: 500px !important;
+   }
+   .p__form__input__pw {
+      width: 500px !important;
+   }
+   .p__form__input__mail {
       width: 500px !important;
    }
    .p__form__submit {
@@ -419,6 +465,10 @@
 
       font-size: 1em;
 
+      display: flex;
+      justify-content: center !important;
+      align-items: center !important;
+
       cursor: pointer;
 
       transition: all 0.25s;
@@ -429,6 +479,16 @@
       
       border: 2px #5F5F5F solid;
    }
+   .p__form__box {
+      display: flex;
+   }
+   .signup {
+      background: #2F2F2F;
+   }
+   .signin {
+      background: #5F5F5F;
+   }
+
 
 
 
