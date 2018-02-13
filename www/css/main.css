@@ -1,4 +1,35 @@
-@font-face {
+/** TIPS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+   * color
+   * background
+
+   * width
+   * height
+   * margin
+   * padding
+
+   * font-family
+   * font-size
+   * text-align
+   * text-transform
+   * letter-spacing
+
+   * display
+   * flex-direction
+   * justify-content
+   * align-items
+
+   * position
+   * top bottom left right
+   * z-index
+   * opacity
+
+   * transition
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+/* FONTS ----------------------------------------*/
+   @font-face {
       font-family: "OpenSans-Regular";
        src: url('../fonts/OpenSans-Regular.ttf');
    }
@@ -16,39 +47,36 @@
    }
 
 /* GLOBAL ---------------------------------------*/
+   body {
+      background: #000;
+      color: #fff;
 
-body {
-   background: #000;
-   color: #fff;
+      font-family: OpenSans-Regular;
 
-   overflow-x: hidden;
-
-   font-family: OpenSans-Regular;
-
-}
-a {
-
-   text-decoration: none;
-}
-.DaBigBox {
-   display: flex;
-}
-.is-active {
+      overflow-x: hidden;
+   }
+   a {
+      text-decoration: none;
+   }
+   .DaBigBox {
+      display: flex;
+   }
+   .is-active {
       display: flex !important;
    }
-.is-active-v {
-   width: 25% !important;
-}
-.is-active-w {
-   width: auto;
-}
+   .is-active-v {
+      width: 25% !important;
+   }
+   .is-active-w {
+      width: auto;
+   }
 
 /*HEADER ----------------------------------------*/
    .header {
       background: #bbb;
 
-      padding: 0 5% 0 5%;
       height: 10vh;
+      padding: 0 5% 0 5%;
       
       display: flex;
       justify-content: space-between;
@@ -63,6 +91,8 @@ a {
    .header__box {
       display: flex;
       align-items: center;
+
+      position: relative;
    }
    .h__box__img {
       width: 50px;
@@ -73,11 +103,46 @@ a {
    .h__box__name {
       margin: 0 10px;
    }
+   .h__box__cross {
+      width: 50px;
+      height: 50px;
+
+      cursor: pointer;
+      transition: all 0.25s;
+   }
+   .h__box__cross:hover {
+      transform: rotate(90deg) !important;
+   }
+   .h__box__cross:before {
+      content:'';
+      background: #6F6F6F;
+
+      width: 50px;
+      height: 5px;
+
+      position: absolute;
+      top: 23px;
+
+      transform: rotate(-45deg) !important;
+   }
+   .h__box__cross:after {
+
+      content:'';
+      background: #6F6F6F;
+
+      width: 50px;
+      height: 5px;
+
+      position: absolute;
+      top: 23px;
+
+      transform: rotate(45deg) !important;
+   }
 
 /* FRIENDS --------------------------------------*/
-
    .friends {
       background: #f4F4F4;
+
       width: 0;
       height: 83vh;
    
@@ -85,36 +150,45 @@ a {
    }
    .friends__title {
       color: #2F2F2F;
-      font-size: 2em;
+
       padding: 10px;
+
       display: flex;
       justify-content: center;
+
+      font-size: 2em;
    }
    .friends__list {
-      margin: 10px 25px 0;
       height: 70vh;
+      margin: 10px 25px 0;
+
       overflow: scroll;
       overflow-x: hidden;
    } 
    .f__item {
-      padding: 25px 0;
+      margin: 25px 0;
+
       display: flex;
       align-items: center;
+
+      cursor: pointer;
    }
    .f__item__name {
       color: #7F7F7F;
-      font-size: 1.33em;
+
       margin-left: 25px;
+
+      font-size: 1.33em;
    }
    .f__item__img {
       width: 50px;
       height: auto;
-
    }
 
 /* TABS -----------------------------------------*/
    .mainList {
       background: #5F5F5F;
+
       width: 75%;
    }
    .mainList__list {
@@ -137,7 +211,6 @@ a {
    }
    .mL__social {
       background: #5F5F5F;
-
    }
    .mL__chat {
       background: #6F6F6F;
@@ -150,13 +223,13 @@ a {
    }
    .tabs {
       background: red;
-      height: 70vh;
 
+      height: 70vh;
    }
-   
    .tab {
       width: 100%;
       height: 76vh;
+
       display: none;
    }
    .mL__list__item:hover {
@@ -169,13 +242,16 @@ a {
    }
    .social__post {
       margin: 30px;
+
       display: flex;
    }
    .social__create {
+      background: #2F2F2F;
+
       width: 100%;
       height: 7vh;
       padding: 0 25px;
-      background: #2F2F2F;
+
       display: flex;
       align-items: center;
    }
@@ -184,10 +260,12 @@ a {
       text-decoration: none;
    }
    .s__create__link {
-      border: 2px #bbb solid;
       color: #fff;
+
       padding: 2.5px 10px;
       margin: 0 10px;
+
+      border: 2px #bbb solid;
 
       transition: all 0.25s;
    }
@@ -195,9 +273,10 @@ a {
       background: #bbb;
    }
    .social__overflow {
-      overflow-x: hidden;
-      margin: 25px 15px 25px 25px;
       height: 62vh;
+      margin: 25px 15px 25px 25px;
+
+      overflow-x: hidden;
    }
    .s__box {
       display: flex;
@@ -206,6 +285,7 @@ a {
    .s__post__img {
       width: 100px;
       height: 100px;
+
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
@@ -217,11 +297,13 @@ a {
       font-size: 3em;
    }
    .s__box__user {
-      font-size: 1.25em;
       margin-left: 10px;
+
+      font-size: 1.25em;
    }
    .social__description {
       margin: 25px 0 25px 10px;
+
       font-size: 1.25em;
       font-family: OpenSans-Light;
       line-height: 1.5;
@@ -230,27 +312,37 @@ a {
 /* PROFIL ---------------------------------------*/
    .profil {
       background: #7F7F7F;
+
       width: 0;
       height: 86vh;
 
       transition: all 0.25s;
    }
    .profil__title {
-      font-size: 2em;
-
       padding: 10px;
+
+      font-size: 2em;
       text-align: center;
    }
    .profil__list {
       margin: 10px 0 0;
    }
    .p__list__item {
+      color: #fff;
+
       margin: 50px;
+
       font-size: 1.5em;
+
       display: flex;
       flex-direction: column;
 
+      transition: all 0.25s;
    }
+   .p__list__item:hover {
+      color: #1F1F1F;
+   }
+
 
 /* FOOTER ---------------------------------------*/
    .footer {
@@ -258,32 +350,52 @@ a {
 
       width: 100%;
       height: 7vh;
+      padding-left: 2%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       position: absolute;
       bottom: 0;
    }
+   .f__text__link {
+      color: #5F5F5F;
+
+      font-family: OpenSans-SemiBold;
+   }
+   .f__text__link:hover {
+      color: #000;
+
+      transition: all 0.25s;
+   }
+   .footer__img {
+      margin-right: 4%;
+   }
 
 /* POST -----------------------------------------*/
-
    .post {
       background: #6F6F6F;
+
       width: 100%;
       height: 86vh;
+
       display: flex;
       justify-content: center;
       align-items: center;
    }
    .post__form h2 {
-      font-size: 1.5em;
       margin: 10px 0;
+
+      font-size: 1.5em;
    }
    .post__form__title {
       width: 750px !important;
    }
    .post__form input {
-      margin: 0 auto;
       width: 750px;
       height: 20px;
+      margin: 0 auto;
 
       border: 2px #5F5F5F solid;
       padding: 5px;
@@ -300,18 +412,21 @@ a {
    .p__form__submit {
       background: #5F5F5F;
       color: white;
-      transition: all 0.25s;
+
       width: 250px !important;
       height: 34px !important;
-      cursor: pointer;
-
-
       padding: 5px 10px !important;
 
+      font-size: 1em;
+
+      cursor: pointer;
+
+      transition: all 0.25s;
    }
    .p__form__submit:hover {
       background: #fff;
       color: #5F5F5F;
+      
       border: 2px #5F5F5F solid;
    }
 
