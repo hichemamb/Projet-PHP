@@ -21,7 +21,7 @@
 <?php
 
 
-    if(isset($_POST['submit']))  // Si le bouton s'inscrire est cliquer.
+    if(isset($_POST['submit']))  // Si le bouton s'inscrire est cliqué.
     {
         $username = $_POST['username']; // On stock dans une variable ce qui est saisi dans le champ username.
         $password = $_POST['password'];

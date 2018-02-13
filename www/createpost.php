@@ -6,12 +6,12 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="icon" href="img/icon.png">
 
-		<title>Multiforme, votre plateforme multifonctionelle</title>
+		<title>Poster un message</title>
 	</head>
 	<body>
 		<header class="header">
 			<img src="img/title.svg" class="header__title">
-			<p class="header__description">Votre plateforme multifonction</p>
+			<p class="header__description">Poster un message</p>
 			<div class="header__box">
 				<a href="index.php" class="h__box__cross"></a>
 			</div>
