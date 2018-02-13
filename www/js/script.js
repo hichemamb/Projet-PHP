@@ -35,30 +35,28 @@
 	});
 
 // BUTTONS --------------------------------------
-	
-
-	console.log('bonjour');
 
 
-var tabsLink = document.querySelectorAll('.p__tabs__link');
-var postForm = document.querySelectorAll('.post__form');
+// LOGIN
+	var tabsLink = document.querySelectorAll('.p__tabs__link');
+	var postForm = document.querySelectorAll('.post__form');
 
-for (var i = 0; i < tabsLink.length; i++) {
-	tabsLink[i].addEventListener('click', function() {	
-		console.log(this);
-		var href = this.getAttribute('href');
-		href = href.replace('#', '');
-		for (var j = 0; j < tabsLink.length; j++) {
-			tabsLink[j].classList.remove('is-active') ;
-		}
-		this.classList.add('is-active');
-		for (var a = 0; a < postForm.length; a++) {
-			if (href === postForm[a].getAttribute('id')) {
-				postForm[a].classList.add('is-active');
+	for (var i = 0; i < tabsLink.length; i++) {
+		tabsLink[i].addEventListener('click', function() {	
+			console.log(this);
+			var href = this.getAttribute('href');
+			href = href.replace('#', '');
+			for (var j = 0; j < tabsLink.length; j++) {
+				tabsLink[j].classList.remove('is-active') ;
 			}
-			else {
-				postForm[a].classList.remove('is-active');
+			this.classList.add('is-active');
+			for (var a = 0; a < postForm.length; a++) {
+				if (href === postForm[a].getAttribute('id')) {
+					postForm[a].classList.add('is-active');
+				}
+				else {
+					postForm[a].classList.remove('is-active');
+				}
 			}
-		}
-	});
-}
+		});
+	}

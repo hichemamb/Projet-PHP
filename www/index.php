@@ -13,13 +13,13 @@
 			<img src="img/title.svg" class="header__title">
 			<p class="header__description">Votre plateforme multifonction</p>
 			<div class="header__box">
-				<a href="login.php" class="h__box__name">Se connecter</a>
+				<a href="login.php" class="h__box__name">SE CONNECTER</a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
 			</div>
 		</header>
 		<section class="DaBigBox">
 			<section class="friends is-active-v">
-				<h2 class="friends__title">Ami(e)s :</h2>
+				<h2 class="friends__title">Ami(e)s</h2>
 				<ul class="friends__list">
 					<li class="f__item">
 						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
@@ -78,35 +78,28 @@
 					<section id="social" class="tab mL__social is-active">
 						<section class="social__overflow">
 							<div class="social__post">
-								<img src="img/profil.svg" alt="post profil img" class="s__post__img">
+								<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
 								<div class="s__box">
-									<h3 class="s__box__title">Title</h3>
-									<p class="s__box__user">User</p>
+									<h3 class="s__box__title">Le PHP, une histoire d'installation</h3>
+									<p class="s__box__user">ImBackEndDesigner</p>
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
+									<p><a href="#" class="s__box__link">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
 										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
 
 									</div>
+									<form action="" class="s__box__form">
+										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow"><br>
+										<input type="submit" value="ENVOYER" class="s__box__form__submit">
+									</form>
+									
 								</div>
 							</div>
 
-							<div class="social__post">
-								<img src="img/profil.svg" alt="post profil img" class="s__post__img">
-								<div class="s__box">
-									<h3 class="s__box__title">Title</h3>
-									<p class="s__box__user">User</p>
-									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
-
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<div class="s__box__buttons">
-										<div src="img/fav.svg" alt="fav button" class="s__box__fav">
-										<div src="img/like.svg" alt="like button" class="s__box__like">
-									</div>
-								</div>
-							</div>
+							
 
 						</section>
 						<section class="social__create">
@@ -122,7 +115,7 @@
 				<h2 class="profil__title">Inconnu</h2>
 				<ul class="profil__list">
 					<a href="infos.php" class="p__list__item">Mes informations</a>
-					<li class="p__list__item">Mes favoris</li>
+					<a href="#" class="p__list__item">Mes favoris</a>
 					<a href="index/php" class="p__list__item">Se déconnecter</a>
 				</ul>
 			</section>
