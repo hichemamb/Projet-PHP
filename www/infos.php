@@ -15,11 +15,14 @@
 			<div class="header__box">
 			<a href="index.php" class="h__box__cross"></a>
 		</div>
-		</header>
-		<footer class="footer">
-			<p class="footer__text">© Multiforme 2018 </p>
-			<p class="footer__text">Created by <a href="https://github.com/ShAd0wInK" class="f__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="f__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="f__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="f__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="f__text__link>Fabien MARQUES</a></p>
-			<img src="img/logo.svg" alt="logo footer" class="footer__img">
-		</footer>
+	</header>
+	<footer class="footer">
+		<p class="footer__text">© Multiforme 2018 </p>
+		<p class="footer__text">Created by <a href="https://github.com/ShAd0wInK" class="f__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="f__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="f__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="f__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="f__text__link>Fabien MARQUES</a></p>
+		<img src="img/logo.svg" alt="logo footer" class="footer__img">
+	</footer>
+	<div class="h__box__img" style="display: none"></div>
 </body>
+
+<script src="js/script.js"></script>
 </html>
