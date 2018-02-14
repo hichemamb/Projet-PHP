@@ -28,7 +28,7 @@
 				<h2>Mot de passe: </h2>
 				<input type="password" name="password" placeholder="Ex: PHP4life" class="p__form__input__pw"></br>
 				<h2>Confirmer votre mot de passe: </h2>
-				<input type="password" name="repeatpassword" class="p__form__input__pw"></br>
+				<input type="password" name="password2" class="p__form__input__pw"></br>
 				<input type="submit" value="Confirmer" name="submit" class="p__form__submit">
 			</form>
 			<form action="register.php" method="post" class="post__form signup" id="signup">
@@ -39,7 +39,7 @@
 				<h2>Mot de passe: </h2>
 				<input type="password" name="password" placeholder="Ex: PHP4life" class="p__form__input__pw"></br>
 				<h2>Confirmer votre mot de passe: </h2>
-				<input type="password" name="repeatpassword" class="p__form__input__pw"></br>
+				<input type="password" name="password2" class="p__form__input__pw"></br>
 				<input type="submit" value="Confirmer" name="submit" class="p__form__submit">
 			</form>
 
