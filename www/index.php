@@ -244,7 +244,9 @@
 				<ul class="profil__list">
 
 					<a href="infos.php" class="p__list__item">Mes informations</a>
-					<a href="#" class="p__list__item">Mes favoris</a>
+				<!--	
+<a href="#" class="p__list__item">Mes favoris</a>
+-->
                     <?php
 
                     if (isset($_SESSION['username']))
