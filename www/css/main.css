@@ -333,7 +333,7 @@
       line-height: 1.5;
    }
    .s__box__link__box {
-      margin-bottom: 25px;
+      margin-bottom: 10px;
    }
    .s__box__link {
       color: #70EFC7;
@@ -349,18 +349,45 @@
       border-bottom: 1px #70EFC7 solid;
       transition: all 0.25s;
    }
+   
    .s__box__buttons {
+      /*width: 55px;*/
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-   }
-   .s__box__buttons {
-      width: 35px;
       height: auto;
-      margin-right: 12.5px;
+      margin: 0 20px 15px 20px;
+   }
+   .s__box__button__box {
+      display: flex;
+      align-items: center;
+   }
+   .s__box__button__box p {
+      padding: 0 5px;
    }
    .s__box__like {
       background: url(../img/like.svg);
+      background-size: 100%;
+      width: 25px;
+      height: 25px;
+      margin-left: 5px;
+      transition: all 0.25s;
+      cursor: pointer;
+   }
+   .s__box__like:hover {
+      background: url(../img/like_full.svg);
+      background-size: 100%;
+   }
+   .s__box__fav {
+      background: url(../img/fav.svg);
+      background-size: 100%;
+      width: 25px;
+      height: 25px;
+      margin-left: 5px;
+      transition: all 0.25s;
+      cursor: pointer;
+   }
+   .s__box__fav:hover {
+      background: url(../img/fav_full.svg);
+      background-size: 100%;
    }
    .s__box__form {
       padding: 0 25px;
