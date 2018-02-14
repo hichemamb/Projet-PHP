@@ -51,6 +51,9 @@
 			<img src="img/logo.svg" alt="logo footer" class="footer__img">
 		</footer>
 		<div class="h__box__img" style="display: none"></div>
+		<div class="s__create__link" style="display: none"></div>
+		<div class="s__box__form__submit" style="display: none"></div>
+		<div class="h__box__name" style="display: none"></div>
 	</body>
 	<script src="js/script.js"></script>
     <script src="js/form.js"></script>
