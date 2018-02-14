@@ -20,7 +20,7 @@
 			<nav class="post__tabs">
 				<a href="#signin" class="p__tabs__link signin is-active">Se connecter</a>
 				<a href="#signup" class="p__tabs__link signup">S'inscrire</a>
-				
+
 			</nav>
 			<form action="login.php" method="post" class="post__form signin is-active" id="signin">
 				<h2>Identifiant: </h2>
@@ -42,8 +42,8 @@
 				<input type="password" name="repeatpassword" class="p__form__input__pw"></br>
 				<input type="submit" value="Confirmer" name="submit" class="p__form__submit">
 			</form>
-			
-			
+
+
 		</section>
 		<footer class="footer">
 			<p class="footer__text__first">© Multiforme 2018 </p>
@@ -57,6 +57,8 @@
 </html>
 
 
+
+
 <?php
 
 session_start();
@@ -66,7 +68,7 @@ if(isset($_GET['success'])) {
 }
 
 
-if(isset($_POST['submit']))  // Si le bouton s'inscrire est cliquer.
+if(isset($_POST['submit']))  //
 {
     $username = $_POST['username']; // On stock dans une variable ce qui est saisi dans le champ username.
     $password = $_POST['password'];
@@ -76,23 +78,22 @@ if(isset($_POST['submit']))  // Si le bouton s'inscrire est cliquer.
     {
 
         require_once "connexion.php";
-        $password =md5($password);
+        $password = md5($password);
 
         $req = $bdd->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
         $req->execute( array(
                 'username'  =>  $username,
                 'password'  =>  $password
-            )
-        );
+            ));
         $count = $req->fetchColumn();
         if($count > 0)
         {
             $_SESSION['username']=$username;
             header("Location: index.php");
 
-        }else echo "Identifiant ou mot de passe incorrect";
+        } else echo '<script type="text/javascript">window.alert("Identifiant ou mot de passe incorrect");</script>';
 
-    }else echo " Veuillez saisir tout les champs";
+    } else echo '<script type="text/javascript">window.alert("Veuillez saisir tout les champs");</script>';
 
 }
 

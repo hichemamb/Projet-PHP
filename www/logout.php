@@ -1,6 +1,17 @@
 <?php
+
+/**
+ * Created by PhpStorm.
+ * User: hichemamb
+ * Date: 14/02/2018
+ * Time: 03:17
+ */
+
 session_start();
-$_SESSION = array();
+
 session_destroy();
-header("Location: connexion.php");
+
+header("Location: index.php");
 ?>
+
+
