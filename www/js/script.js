@@ -35,20 +35,40 @@
 	});
 
 // BUTTONS --------------------------------------
+	var like = document.querySelectorAll('.s__box__like');
+		fav = document.querySelectorAll('.s__box__fav');
+		
+		for (let i = 0; i < like.length; i++) {
+			like[i].addEventListener('click', function() {
+				like[i].classList.toggle('like__full');
+			});
+		}
+		for (let i = 0; i < fav.length; i++) {
+			fav[i].addEventListener('click', function() {
+				fav[i].classList.toggle('fav__full');
+			});
+		}
 
 // COMMENTS -------------------------------------
 	var triangle = document.querySelectorAll('.s__box__form__triangle');
-		comment = document.querySelector('.s__box__form');
-		comments = document.querySelector('.comments')
-		for (var i = 0; i < triangle.length; i++) {
+		comment = document.querySelectorAll('.s__box__form');
+		comments = document.querySelectorAll('.comments')
+		for (let i = 0; i < triangle.length; i++) {
 			triangle[i].addEventListener('click', function() {
-				comment.classList.toggle('is-active');
-				comments.classList.toggle('is-active');
-				triangle[i].classList.toggle('triangle_change');
+				for (var j = 0; j < triangle.length; j++) {
+					comment[j].classList.add('is-active');
+					comments[j].classList.add('is-active');
+					triangle[j].classList.add('triangle_change');
+					if ( j !== i ) {
+						comment[j].classList.toggle('is-active');
+						comments[j].classList.toggle('is-active');
+						triangle[j].classList.toggle('triangle_change');
+					}
+				}
 			});
 		}
  
-// LOGIN
+// LOGIN ----------------------------------------
 	var tabsLink = document.querySelectorAll('.p__tabs__link');
 	var postForm = document.querySelectorAll('.post__form');
 
@@ -71,3 +91,30 @@
 			}
 		});
 	}
+
+// NEEDTOCONNECT --------------------------------
+
+	var postLink = document.querySelector('.s__create__link');
+		connectLink = document.querySelector('.h__box__name');
+		infosLink = document.querySelector('.p__list__item__infos');
+		commentLink = document.querySelectorAll('.s__box__form__submit')
+	
+ 	
+ 		if (  connectLink.textContent === 'SE CONNECTER') {
+ 			postLink.setAttribute('href', 'login.php');
+ 			infosLink.setAttribute('href', 'login.php');
+ 			for (var i = 0; i < commentLink.length; i++) {
+ 				commentLink[i].addEventListener('click', function() {
+ 					connectLink.click();
+ 				});
+ 			};
+ 			
+ 			
+	 	}
+		
+
+
+
+
+
+
