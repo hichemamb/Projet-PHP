@@ -30,26 +30,9 @@
 
 			$conn = connect('actu');
 			if (isset($_POST["title"]) === true && empty($_POST["title"]) === false) {
-				$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];;
-				$sql = "INSERT INTO actu.post (id, name, link, description, nb_like, nb_fav, nb_comments, tags, comments, liked, faved, date, user) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-				$stmt = $conn->prepare($sql);
-				$stmt->execute([
-					NULL,
-					$_POST['title'],
-					$_POST['link'],
-					$_POST['description'],
-					$_POST['nb_like'],
-					$_POST['nb_fav'],
-					$_POST['nb_comments'],
-					$_POST['tags'],
-					$_POST['comments'],
-					$_POST['liked'],
-					$_POST['faved'],
-					$_POST['date'],
-					$_POST['user']
-				]);
+				$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
+				create($conn, $tables, 'actu.post', $_POST);
 			}
-
 			$stmt = read($conn, $tables, 'actu.post');
 		?>
 		<table>
