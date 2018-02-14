@@ -15,9 +15,9 @@
 			<div class="header__box">
 				<a href="login.php" class="h__box__name">SE CONNECTER<?php
 
-                    session_start();
+                    //session_start();
 
-                    echo $_SESSION['username'];
+                    //echo $_SESSION['username'];
 
                     ?></a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
@@ -97,10 +97,12 @@
 											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
 											<p>0</p>
 										</div>
+										<!--
 										<div class="s__box__button__box">
 											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 											<p>0</p>
 										</div>
+										-->
 
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
@@ -137,10 +139,12 @@
 											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
 											<p>0</p>
 										</div>
+										<!--
 										<div class="s__box__button__box">
 											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 											<p>0</p>
 										</div>
+										-->
 
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
@@ -177,11 +181,12 @@
 											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
 											<p>0</p>
 										</div>
+										<!--
 										<div class="s__box__button__box">
 											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 											<p>0</p>
 										</div>
-
+										-->
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
 									
@@ -232,7 +237,9 @@
 				<h2 class="profil__title">Inconnu</h2>
 				<ul class="profil__list">
 					<a href="infos.php" class="p__list__item p__list__item__infos">Mes informations</a>
-					<a href="#" class="p__list__item">Mes favoris</a>
+					<!--
+						<a href="#" class="p__list__item">Mes favoris</a>
+					-->
 					<a href="index/php" class="p__list__item">Se déconnecter</a>
 				</ul>
 			</section>
