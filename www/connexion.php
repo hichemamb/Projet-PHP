@@ -7,7 +7,7 @@
  */
 
 try {
-    $bdd = new PDO('mysql:dbname=form;host=localhost', 'root', 'juilletjuillet');
+    $bdd = new PDO('mysql:dbname=form;host=localhost', 'root', '8V4B7u3g');
 
 } catch (PDOException $exception) {
     exit($exception->getMessage());
