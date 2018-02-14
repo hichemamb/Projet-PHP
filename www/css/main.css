@@ -372,6 +372,10 @@
       transition: all 0.25s;
       cursor: pointer;
    }
+   .like__full {
+      background: url(../img/like_full.svg);
+      background-size: 100%;
+   }
    .s__box__like:hover {
       background: url(../img/like_full.svg);
       background-size: 100%;
@@ -384,6 +388,10 @@
       margin-left: 5px;
       transition: all 0.25s;
       cursor: pointer;
+   }
+   .fav__full {
+      background: url(../img/fav_full.svg);
+      background-size: 100%;
    }
    .s__box__fav:hover {
       background: url(../img/fav_full.svg);

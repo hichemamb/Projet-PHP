@@ -35,6 +35,19 @@
 	});
 
 // BUTTONS --------------------------------------
+	var like = document.querySelectorAll('.s__box__like');
+		fav = document.querySelectorAll('.s__box__fav');
+		
+		for (let i = 0; i < like.length; i++) {
+			like[i].addEventListener('click', function() {
+				like[i].classList.toggle('like__full');
+			});
+		}
+		for (let i = 0; i < fav.length; i++) {
+			fav[i].addEventListener('click', function() {
+				fav[i].classList.toggle('fav__full');
+			});
+		}
 
 // COMMENTS -------------------------------------
 	var triangle = document.querySelectorAll('.s__box__form__triangle');
@@ -55,7 +68,7 @@
 			});
 		}
  
-// LOGIN
+// LOGIN ----------------------------------------
 	var tabsLink = document.querySelectorAll('.p__tabs__link');
 	var postForm = document.querySelectorAll('.post__form');
 
