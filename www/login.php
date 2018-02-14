@@ -81,7 +81,7 @@ if(isset($_POST['submit']))  //
     {
 
         require_once "connexion.php";
-        $password = md5($password);
+        $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
 
         $req = $bdd->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
         $req->execute( array(

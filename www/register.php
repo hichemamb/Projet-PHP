@@ -76,7 +76,7 @@
             if($password==$password2)
             {
                 // Here we securise the password with an algo , it's a password hash to prevent hacking
-                $password = md5($password);
+                $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
                 // Here we include " connexion.php " which is the connexion to us data base
                 require_once "connexion.php";
 
