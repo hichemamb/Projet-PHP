@@ -689,7 +689,7 @@
          transition: all 0.3s;
    }
    ::-webkit-scrollbar-thumb:hover {
-         background: #20334C; 
+         background: #35547F; 
    }
    .triangle_change {
       display: none;
