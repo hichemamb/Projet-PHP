@@ -85,7 +85,7 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
 										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
@@ -119,7 +119,7 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
 										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
@@ -153,7 +153,7 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
 										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
@@ -192,7 +192,7 @@
 			<section class="profil">
 				<h2 class="profil__title">Inconnu</h2>
 				<ul class="profil__list">
-					<a href="infos.php" class="p__list__item">Mes informations</a>
+					<a href="infos.php" class="p__list__item p__list__item__infos">Mes informations</a>
 					<a href="#" class="p__list__item">Mes favoris</a>
 					<a href="index/php" class="p__list__item">Se déconnecter</a>
 				</ul>
@@ -200,7 +200,7 @@
 		</section>
 		<footer class="footer">
 			<p class="footer__text__first">© Multiforme 2018 </p>
-			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link">HÉTIC</a>.</p>
+			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link" target="blank_">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link" target="blank_">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link" target="blank_">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link" target="blank_">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link" target="blank_">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link" target="blank_">HÉTIC</a>.</p>
 			<img src="img/logo.svg" alt="logo footer" class="footer__img">
 		</footer>
 	</body>
