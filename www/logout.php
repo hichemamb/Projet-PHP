@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: hichemamb
@@ -12,3 +13,5 @@ session_destroy();
 
 header("Location: index.php");
 ?>
+
+

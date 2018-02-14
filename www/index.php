@@ -15,6 +15,7 @@
 			<div class="header__box">
 				<a href="login.php" class="h__box__name"><?php
 
+
                     session_start();
                     if (isset($_SESSION['username']))
                     {
@@ -22,6 +23,7 @@
                     }
                     else
                         echo 'SE CONNECTER';
+
 
                     ?></a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
@@ -95,10 +97,18 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
-										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
+										<div class="s__box__button__box">
+											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
+											<p>0</p>
+										</div>
+										<!--
+										<div class="s__box__button__box">
+											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+											<p>0</p>
+										</div>
+										-->
 
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
@@ -129,10 +139,18 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
-										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
+										<div class="s__box__button__box">
+											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
+											<p>0</p>
+										</div>
+										<!--
+										<div class="s__box__button__box">
+											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+											<p>0</p>
+										</div>
+										-->
 
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
@@ -163,11 +181,18 @@
 									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
 
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link">http://link.mescouilles</a></p>
+									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
-										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
-
+										<div class="s__box__button__box">
+											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
+											<p>0</p>
+										</div>
+										<!--
+										<div class="s__box__button__box">
+											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+											<p>0</p>
+										</div>
+										-->
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
 									
@@ -194,14 +219,30 @@
 							<p class="s__create__text">Vous voulez partager une idée ? <a href="createpost.php" class="s__create__link">POSTER</a></p>
 						</section>
 					</section>
-					<section id="chat" class="tab mL__chat"></section>
-					<section id="forum" class="tab mL__forum"></section>
-					<section id="intranet" class="tab mL__intranet"></section>
+					<section id="chat" class="tab mL__chat">
+						<div class="tab__wip">
+							<h3 class="t__wip__title">Disponible prochainement</h3>
+							<img src="img/gear.svg" alt="" class="t__wip__gear">
+						</div>
+					</section>
+					<section id="forum" class="tab mL__forum">
+						<div class="tab__wip">
+							<h3 class="t__wip__title">Disponible prochainement</h3>
+							<img src="img/gear.svg" alt="" class="t__wip__gear">
+						</div>
+					</section>
+					<section id="intranet" class="tab mL__intranet">
+						<div class="tab__wip">
+							<h3 class="t__wip__title">Disponible prochainement</h3>
+							<img src="img/gear.svg" alt="" class="t__wip__gear">
+						</div>
+					</section>
 				</section>
 			</section>
 			<section class="profil">
 				<h2 class="profil__title">Inconnu</h2>
 				<ul class="profil__list">
+
 					<a href="infos.php" class="p__list__item">Mes informations</a>
 					<a href="#" class="p__list__item">Mes favoris</a>
                     <?php
@@ -217,12 +258,13 @@
                     }
 
                     ?>
+
 				</ul>
 			</section>
 		</section>
 		<footer class="footer">
 			<p class="footer__text__first">© Multiforme 2018 </p>
-			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link">HÉTIC</a>.</p>
+			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link" target="blank_">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link" target="blank_">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link" target="blank_">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link" target="blank_">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link" target="blank_">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link" target="blank_">HÉTIC</a>.</p>
 			<img src="img/logo.svg" alt="logo footer" class="footer__img">
 		</footer>
 	</body>
