@@ -13,7 +13,13 @@
 			<img src="img/title.svg" class="header__title">
 			<p class="header__description">Votre plateforme multifonction</p>
 			<div class="header__box">
-				<a href="login.php" class="h__box__name">SE CONNECTER</a>
+				<a href="login.php" class="h__box__name">SE CONNECTER<?php
+
+                    session_start();
+
+                    echo $_SESSION['username'];
+
+                    ?></a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
 			</div>
 		</header>
