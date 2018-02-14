@@ -13,11 +13,15 @@
 			<img src="img/title.svg" class="header__title">
 			<p class="header__description">Votre plateforme multifonction</p>
 			<div class="header__box">
-				<a href="login.php" class="h__box__name">SE CONNECTER<?php
+				<a href="login.php" class="h__box__name"><?php
 
                     session_start();
-
-                    echo $_SESSION['username'];
+                    if (isset($_SESSION['username']))
+                    {
+                        echo $_SESSION['username'];
+                    }
+                    else
+                        echo 'SE CONNECTER';
 
                     ?></a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
@@ -200,7 +204,19 @@
 				<ul class="profil__list">
 					<a href="infos.php" class="p__list__item">Mes informations</a>
 					<a href="#" class="p__list__item">Mes favoris</a>
-					<a href="index/php" class="p__list__item">Se déconnecter</a>
+                    <?php
+
+                    if (isset($_SESSION['username']))
+                        {
+                           echo "<a href='logout.php' class='p__list__item'>Se déconnecter</a>";
+                        }
+
+                    if (!isset($_SESSION['username']))
+                    {
+                        echo "<a href='index.php' class='p__list__item'>Se déconnecter</a>";
+                    }
+
+                    ?>
 				</ul>
 			</section>
 		</section>
