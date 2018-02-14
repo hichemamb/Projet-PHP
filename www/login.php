@@ -23,7 +23,7 @@
 				
 			</nav>
 			<form action="login.php" method="post" class="post__form signin is-active" id="signin">
-				<h2>Indentifiant: </h2>
+				<h2>Identifiant: </h2>
 				<input type="text" name="username" placeholder="Ex: Bunkermaster" class="p__form__input__id"></br>
 				<h2>Mot de passe: </h2>
 				<input type="password" name="password" placeholder="Ex: PHP4life" class="p__form__input__pw"></br>
@@ -32,7 +32,7 @@
 				<input type="submit" value="Confirmer" name="submit" class="p__form__submit">
 			</form>
 			<form action="register.php" method="post" class="post__form signup" id="signup">
-				<h2>Indentifiant: </h2>
+				<h2>Identifiant: </h2>
 				<input type="text" name="username" placeholder="Ex: Bunkermaster" class="p__form__input__id"></br>
 				<h2>Adresse mail: </h2>
 				<input type="email" name="email" placeholder="Ex: maclinux@pc.com" class="p__form__input__mail"></br>
@@ -53,6 +53,7 @@
 		<div class="h__box__img" style="display: none"></div>
 	</body>
 	<script src="js/script.js"></script>
+    <script src="js/form.js"></script>
 </html>
 
 
