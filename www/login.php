@@ -22,7 +22,7 @@
 				<a href="#signup" class="p__tabs__link signup">S'inscrire</a>
 				
 			</nav>
-			<form action="index.php" method="post" class="post__form signin is-active" id="signin">
+			<form action="login.php" method="post" class="post__form signin is-active" id="signin">
 				<h2>Indentifiant: </h2>
 				<input type="text" name="username" placeholder="Ex: Bunkermaster" class="p__form__input__id"></br>
 				<h2>Mot de passe: </h2>
@@ -31,11 +31,11 @@
 				<input type="password" name="repeatpassword" class="p__form__input__pw"></br>
 				<input type="submit" value="Confirmer" name="submit" class="p__form__submit">
 			</form>
-			<form action="index.php" method="post" class="post__form signup" id="signup">
+			<form action="register.php" method="post" class="post__form signup" id="signup">
 				<h2>Indentifiant: </h2>
 				<input type="text" name="username" placeholder="Ex: Bunkermaster" class="p__form__input__id"></br>
 				<h2>Adresse mail: </h2>
-				<input type="email" name="mail" placeholder="Ex: maclinux@pc.com" class="p__form__input__mail"></br>
+				<input type="email" name="email" placeholder="Ex: maclinux@pc.com" class="p__form__input__mail"></br>
 				<h2>Mot de passe: </h2>
 				<input type="password" name="password" placeholder="Ex: PHP4life" class="p__form__input__pw"></br>
 				<h2>Confirmer votre mot de passe: </h2>
@@ -56,3 +56,43 @@
 </html>
 
 
+<?php
+
+session_start();
+
+if(isset($_GET['success'])) {
+    echo "Inscription terminée";
+}
+
+
+if(isset($_POST['submit']))  // Si le bouton s'inscrire est cliquer.
+{
+    $username = $_POST['username']; // On stock dans une variable ce qui est saisi dans le champ username.
+    $password = $_POST['password'];
+
+
+    if ((isset($_POST['username']) && !empty($_POST['username'])) && (isset($_POST['password']) && !empty($_POST['password'])))
+    {
+
+        require_once "connexion.php";
+        $password =md5($password);
+
+        $req = $bdd->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
+        $req->execute( array(
+                'username'  =>  $username,
+                'password'  =>  $password
+            )
+        );
+        $count = $req->fetchColumn();
+        if($count > 0)
+        {
+            $_SESSION['username']=$username;
+            header("Location: index.php");
+
+        }else echo "Identifiant ou mot de passe incorrect";
+
+    }else echo " Veuillez saisir tout les champs";
+
+}
+
+?>
