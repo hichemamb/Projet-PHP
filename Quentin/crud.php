@@ -21,6 +21,7 @@
 			$sql_request .= $value;
 			$value === $values[count($values) - 1] ? $sql_request .= ') VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);' : $sql_request .= ', ';
 		}
+		var_dump($sql_request);
 		$stmt = $pdo->prepare($sql_request);
 		$stmt->execute($tmp);
 
@@ -40,7 +41,7 @@
 		return $stmt;
 	}
 
-	function update($pdo, $values, $table_of_db, $post_values)
+	function update($pdo, $values, $table_of_db, $post_values/*, id*/)
 	{
 		$sql_request = "UPDATE " . $table_of_db . " SET ";
 /*		$tmp = [NULL];

@@ -133,8 +133,14 @@
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
 									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
-										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
+										<div class="s__box__button__box">
+											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
+											<p>0</p>
+										</div>
+										<div class="s__box__button__box">
+											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+											<p>0</p>
+										</div>
 
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
@@ -167,8 +173,14 @@
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
 									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
 									<div class="s__box__buttons">
-										<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-										<div src="img/like.svg" alt="like button" class="s__box__like"></div>
+										<div class="s__box__button__box">
+											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
+											<p>0</p>
+										</div>
+										<div class="s__box__button__box">
+											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+											<p>0</p>
+										</div>
 
 									</div>
 									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
@@ -196,9 +208,24 @@
 							<p class="s__create__text">Vous voulez partager une idée ? <a href="createpost.php" class="s__create__link">POSTER</a></p>
 						</section>
 					</section>
-					<section id="chat" class="tab mL__chat"></section>
-					<section id="forum" class="tab mL__forum"></section>
-					<section id="intranet" class="tab mL__intranet"></section>
+					<section id="chat" class="tab mL__chat">
+						<div class="tab__wip">
+							<h3 class="t__wip__title">Disponible prochainement</h3>
+							<img src="img/gear.svg" alt="" class="t__wip__gear">
+						</div>
+					</section>
+					<section id="forum" class="tab mL__forum">
+						<div class="tab__wip">
+							<h3 class="t__wip__title">Disponible prochainement</h3>
+							<img src="img/gear.svg" alt="" class="t__wip__gear">
+						</div>
+					</section>
+					<section id="intranet" class="tab mL__intranet">
+						<div class="tab__wip">
+							<h3 class="t__wip__title">Disponible prochainement</h3>
+							<img src="img/gear.svg" alt="" class="t__wip__gear">
+						</div>
+					</section>
 				</section>
 			</section>
 			<section class="profil">
