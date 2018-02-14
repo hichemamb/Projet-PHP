@@ -247,6 +247,32 @@
 
       display: none;
    }
+   .tab__wip {
+      background: rgba(255,255,255,0.75);
+      width: 100%;
+      margin: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   .t__wip__title {
+      font-size: 2em;
+      color: #2B4466;
+      margin-bottom: 50px;
+   }
+   .t__wip__gear {
+      width: 75px;
+      animation: rotate 3.5s infinite linear;
+   }
+   @keyframes rotate {
+      from {
+         transform: rotate(0deg);
+      }
+      to {
+         transform: rotate(360deg);
+      }
+   }
    .mL__list__item:hover {
       background: rgba(112,239,199, 0.333);
    }
@@ -666,7 +692,7 @@
          background: #20334C; 
    }
    .triangle_change {
-      transform: rotate(180deg);
+      display: none;
    }
 
 
