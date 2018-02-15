@@ -21,11 +21,6 @@ SET
   email = ?
 WHERE id = " . $data['id'] . ";";
 
-var_dump($data);
-var_dump($requete);
-var_dump($_SESSION);
-var_dump($_POST);
-
 $stmt = $bdd->prepare($requete);
 $stmt->execute([$_POST['username'], $_POST['email']]);
 $_SESSION['username'] = $_POST['username'];

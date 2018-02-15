@@ -35,19 +35,6 @@
 				<ul class="friends__list">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<?php require_once './crud.php';
 				$conn = connect('members');
 				$tables = ['id', 'username'];
@@ -116,7 +103,6 @@
 								$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
 
 								$stmt = read($conn, $tables, 'actu.post');
-								var_dump($stmt);
 								while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
 								<div class="social__post">
 									<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
@@ -207,7 +193,21 @@
 				</section>
 			</section>
 			<section class="profil">
-				<h2 class="profil__title">Inconnu</h2>
+               <h2 class="profil__title">
+                   <?php
+
+                   if (isset($_SESSION['username']))
+                   {
+                       echo $_SESSION['username'];
+                   }
+                   else
+                       echo 'Inconnu';
+
+
+                   ?>
+
+               </h2>
+
 				<ul class="profil__list">
 
                     <?php if (isset($_SESSION['username'])) // Here we check if the user is online , if he is online he can post else he can't
