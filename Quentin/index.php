@@ -26,14 +26,14 @@
 		</form>
 		<?php
 
-			require_once "./crud.php";
+			require_once "../www/crud.php";
 
 			$conn = connect('actu');
+			$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
 			if (isset($_POST["title"]) === true && empty($_POST["title"]) === false) {
-				$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
 				create($conn, $tables, 'actu.post', $_POST);
 			}
-			$stmt = read($conn, $tables, 'actu.post');
+			$stmt = read_where($conn, $tables, 'actu.post', 'id', '5');
 		?>
 		<table>
 			<?php while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>

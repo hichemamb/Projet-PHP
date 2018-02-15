@@ -33,7 +33,35 @@
 			<section class="friends is-active-v">
 				<h2 class="friends__title">Ami(e)s</h2>
 				<ul class="friends__list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<?php require_once './crud.php';
+				$conn = connect('members');
+				$tables = ['id', 'username'];
+				$stmt = read($conn, $tables, 'members.member_table');
+				while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
+
+
 					<li class="f__item">
+						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
+						<p class="f__item__name"><?= $row['username'] ?></p>
+					</li>
+				<?php endwhile;?>
+
+<!-- 					<li class="f__item">
 						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
 					</li>
@@ -72,11 +100,7 @@
 					<li class="f__item">
 						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
+					</li> -->
 				</ul>
 			</section>
 			<section class="mainList">
@@ -89,131 +113,61 @@
 				<section class="tabs">
 					<section id="social" class="tab mL__social is-active">
 						<section class="social__overflow">
-							<div class="social__post">
-								<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
-								<div class="s__box">
-									<h3 class="s__box__title">Le PHP, une histoire d'installation</h3>
-									<p class="s__box__user">ImBackEndDesigner</p>
-									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
+								<?php $conn = connect('actu');
+								$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
-									<div class="s__box__buttons">
-										<div class="s__box__button__box">
-											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
-											<p>0</p>
-										</div>
-										<!--
-										<div class="s__box__button__box">
-											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-											<p>0</p>
-										</div>
-										-->
+								$stmt = read($conn, $tables, 'actu.post');
+								while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
+								<div class="social__post">
+									<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
+									<div class="s__box">
+										<h3 class="s__box__title"><?=$row["name"]?></h3>
+										<p class="s__box__user"></p>
+										<p class="social__description"><?=$row["description"]?></p>
+										<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_"><?=$row["link"]?></a></p>
+										<div class="s__box__buttons">
+											<div class="s__box__button__box">
+												<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
+												<p><?=$row["nb_like"]?></p>
+											</div>
 
-									</div>
-									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
-									
-									<div class="comments">
-										<div class="comment">
-											<h3 class="comment__user">Javashit</h3>
-											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+
+
+
+
+											<div class="s__box__button__box">
+												<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
+												<p><?=$row["nb_fav"]?></p>
+											</div>
+
+
+
+
+
+
 										</div>
-										<div class="comment">
-											<h3 class="comment__user">Javashit</h3>
-											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+										<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
+										
+										<div class="comments">
+											<div class="comment">
+												<h3 class="comment__user"><?=$row["user"]?></h3>
+												<p class="comment__description"><?=$row["comments"]?></p>
+											</div>
+<!-- 		a changer quand passage a JSON									<div class="comment">
+												<h3 class="comment__user">Javashit</h3>
+												<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
+											</div> -->
 										</div>
+										<form action="" class="s__box__form">
+											<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
+											<input type="submit" value="ENVOYER" class="s__box__form__submit">
+										</form>
+										
+										
 									</div>
-									<form action="" class="s__box__form">
-										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
-										<input type="submit" value="ENVOYER" class="s__box__form__submit">
-									</form>
-									
-									
 								</div>
-							</div>
-							<div class="social__post">
-								<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
-								<div class="s__box">
-									<h3 class="s__box__title">Le PHP, une histoire d'installation</h3>
-									<p class="s__box__user">ImBackEndDesigner</p>
-									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
+							<?php endwhile;?>
 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
-									<div class="s__box__buttons">
-										<div class="s__box__button__box">
-											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
-											<p>0</p>
-										</div>
-										<!--
-										<div class="s__box__button__box">
-											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-											<p>0</p>
-										</div>
-										-->
-
-									</div>
-									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
-									
-									<div class="comments">
-										<div class="comment">
-											<h3 class="comment__user">Javashit</h3>
-											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
-										</div>
-										<div class="comment">
-											<h3 class="comment__user">Javashit</h3>
-											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
-										</div>
-									</div>
-									<form action="" class="s__box__form">
-										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
-										<input type="submit" value="ENVOYER" class="s__box__form__submit">
-									</form>
-									
-									
-								</div>
-							</div>
-							<div class="social__post">
-								<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
-								<div class="s__box">
-									<h3 class="s__box__title">Le PHP, une histoire d'installation</h3>
-									<p class="s__box__user">ImBackEndDesigner</p>
-									<p class="social__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum nam quae eaque qui laudantium facere, sapiente aliquid suscipit commodi esse, sint sunt harum alias asperiores excepturi nihil in iure debitis?
-
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde totam, sit similique recusandae. Consequatur repudiandae ea, voluptatem asperiores impedit? Sit quibusdam, perspiciatis ipsa? Sed consectetur non maiores ad, doloremque dicta?</p>
-									<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_">http://link.mescouilles</a></p>
-									<div class="s__box__buttons">
-										<div class="s__box__button__box">
-											<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
-											<p>0</p>
-										</div>
-										<!--
-										<div class="s__box__button__box">
-											<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
-											<p>0</p>
-										</div>
-										-->
-									</div>
-									<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
-									
-									<div class="comments">
-										<div class="comment">
-											<h3 class="comment__user">Javashit</h3>
-											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
-										</div>
-										<div class="comment">
-											<h3 class="comment__user">Javashit</h3>
-											<p class="comment__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quos adipisci porro dolor soluta consectetur id aliquam nesciunt quisquam, sequi alias eaque nemo necessitatibus reiciendis. Rem ea, harum possimus voluptatum.</p>
-										</div>
-									</div>
-									<form action="" class="s__box__form">
-										<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
-										<input type="submit" value="ENVOYER" class="s__box__form__submit">
-									</form>
-									
-									
-								</div>
-							</div>
 						</section>
 						<section class="social__create">
 

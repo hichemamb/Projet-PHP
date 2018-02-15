@@ -41,31 +41,41 @@
 		return $stmt;
 	}
 
-	function update($pdo, $values, $table_of_db, $post_values/*, id*/)
+	function read_where($pdo, $values, $table_of_db, $where, $where_value)
+	{
+		$sql_request = "SELECT ";
+		foreach ($values as $value) {
+			$sql_request .= $value;
+			$value === $values[count($values) - 1] ? $sql_request .= ' FROM ' . $table_of_db . " WHERE " . $where . " = '" . $where_value . "';" : $sql_request .= ', ';
+		}
+		$stmt = $pdo->prepare($sql_request);
+		$stmt->execute();
+
+		return $stmt;
+	}
+
+	function update($pdo, $values, $table_of_db, $post_values, $where, $where_value)
 	{
 		$sql_request = "UPDATE " . $table_of_db . " SET ";
-/*		$tmp = [NULL];
-		$tmp = array_merge($tmp, array_values($post_values));
-		// a voir
-*/		array_pop($tmp);
+		$tmp = [NULL];
+		$tmp = array_values($post_values);
+		array_pop($tmp);
 		foreach ($values as $value) {
 			$sql_request .= $value . " = ?";
 			$value === $values[count($values) - 1] ? $sql_request .= ' ' : $sql_request .= ', ';
 		}
-		$sql_request .= "WHERE id = ";
-		// rajouter l'id en fct de comment on l'a recup
+		$sql_request .= "WHERE " . $where . "='" . $where_value . "';";
 		$stmt = $pdo->prepare($sql_request);
 		$stmt->execute($post_values);
 
 		return;
 	}
 
-/*	function delete($pdo, $table_of_db, $id)
+	function delete($pdo, $table_of_db, $id, $where, $where_value)
 	{
-		$sql_request = "DELETE FROM " . $table_of_db . " WHERE id = :id;";
+		$sql_request = "DELETE FROM " . $table_of_db . " WHERE " . $where . "='" . $where_value . "';";
 		$stmt = $pdo->prepare($sql_request);
-		$stmt->bindValue(':id', $id);
 		$stmt->execute();
 	}
-*/
+
 ?>
