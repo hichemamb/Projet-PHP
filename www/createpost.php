@@ -17,16 +17,16 @@
 			</div>
 		</header>
 		<section class="post">
-			<form action="" class="post__form" style="display: flex">
-				<h2 class="p__form__title">Titre :</h2>
-				<input type="text" class="p__form__input__title" placeholder="Ex: Mon super titre">
+			<form method="post" action="" class="post__form" style="display: flex">
+				<h2 class="p__form__title">Nom :</h2>
+				<input type="text" class="p__form__input__title" placeholder="Ex: Mon super nom" name="title">
 				<h2 class="p__form__description">Description :</h2>
-				<input type="text" class="p__form__input__description" placeholder="Ex: Ma super description">
+				<input type="text" class="p__form__input__description" placeholder="Ex: Ma super description" name="description">
 				<h2 class="p__form__description">Lien :</h2>
-				<input type="text" class="p__form__input__lien" placeholder="Ex: Mon super lien">
+				<input type="text" class="p__form__input__lien" placeholder="Ex: Mon super lien" name="link">
 				<h2 class="p__form__tags">Tags :</h2>
 				<div class="p__form__box">
-					<input type="text" class="p__form__input__tags" placeholder="Ex: PHP, Hagrid">
+					<input type="text" class="p__form__input__tags" placeholder="Ex: PHP, Hagrid" name="tags">
 					<input type="submit" value="VALIDER" class="p__form__submit">
 				</div>
 			</form>
@@ -43,3 +43,17 @@
 	</body>
 	<script src="js/script.js"></script>
 </html>
+
+<?php 
+	if (isset($_POST['title']))
+	{
+		require_once "./crud.php";
+		
+		$conn = connect('actu');
+					$tables = ['id', 'name', 'description', 'link', 'tags'];
+		if (isset($_POST["title"]) === true && empty($_POST["title"]) === false) {
+			create_post($conn, $tables, 'actu.post', $_POST);
+		}
+		header("Location: index.php");
+	}
+?>
