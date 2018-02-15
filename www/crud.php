@@ -3,7 +3,7 @@
 	function connect($database)
 	{
 		try {
-			$conn = new PDO('mysql:dbname=' . $database . ';host=localhost', 'root', 'juilletjuillet');
+			$conn = new PDO('mysql:dbname=' . $database . ';host=localhost', 'root', '8V4B7u3g');
 		} catch (PDOException $exception) {
 			exit($exception->getMessage());
 		}
