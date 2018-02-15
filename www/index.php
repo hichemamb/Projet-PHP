@@ -62,12 +62,6 @@
 										<p class="social__description"><?=$row["description"]?></p>
 										<p class="s__box__link__box"><a href="#" class="s__box__link" target="blank_"><?=$row["link"]?></a></p>
 
-										<?php if ($row['name'] === $_SESSION['username']) :?>
-											<?php $_SESSION['id'] = $row['id']; ?>
-											<form action="dodelete.php" method="post">
-											   <input type="submit" value="supprimer">
-											</form>
-										<?php endif; ?>
 										<div class="s__box__buttons">
 											<div class="s__box__button__box">
 												<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
@@ -77,6 +71,12 @@
 												<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 												<p><?=$row["nb_fav"]?></p>
 											</div>
+											<?php if ($row['name'] === $_SESSION['username']) :?>
+												<?php $_SESSION['id'] = $row['id']; ?>
+												<form action="dodelete.php" method="post">
+												   <input class="p__form__submit" type="submit" value="supprimer" style="width: 100px!important;margin-left: 20px">
+												</form>
+											<?php endif; ?>
 										</div>
 										<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
 
