@@ -1,3 +1,12 @@
+<?php
+
+require_once "connexion.php";
+require_once "../Quentin/crud.php";
+
+    $tables = ['id', 'username', 'email'];
+    $stmt = read_where($bdd, $tables, 'form.users','id', 2);
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,22 +26,35 @@
 			</div>
 		</header>
 		<section class="post">
-			<form action="" class="post__form" style="display: flex">
-                <h2>Indentifiant:</h2>
-                <input type=\"text\" name=\"username\" placeholder=\"Ex: Bunkermaster\" class=\"p__form__input__id\"><br>";
-				<h2>Adresse mail: </h2>
-                <input type=\"text\" name=\"email\" placeholder=\"Ex: Bunkermaster\" class=\"p__form__input__id\"><br>";
-			</form>
-		</section>
-		<footer class="footer">
-			<p class="footer__text__first">© Multiforme 2018 </p>
-			<p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link" target="blank_">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link" target="blank_">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link" target="blank_">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link" target="blank_">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link" target="blank_">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link" target="blank_">HÉTIC</a>.</p>
-			<img src="img/logo.svg" alt="logo footer" class="footer__img">
-		</footer>
-		<div class="h__box__img" style="display: none"></div>
-		<div class="s__create__link" style="display: none"></div>
-		<div class="s__box__form__submit" style="display: none"></div>
-		<div class="h__box__name" style="display: none"></div>
-	</body>
-	<script src="js/script.js"></script>
+            <?php if (isset($_POST["username"]) === true && empty($_POST["username"]) === false && isset($_POST["pass"]) === true && empty($_POST["pass"]) === false): ?>
+    <?php
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    ?>
+<?php endif; ?>
+
+<form action="edit.php" class="post__form" style="display: flex">
+    <?php while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
+        <h2>Identifiant: </h2>
+        <input type="username" name="username"  class="p__form__input__id" value="<?=$row['username']?>" <br>
+        <h2>Adresse mail: </h2>
+        <input type="email" name="email"  class="p__form__input__mail" value="<?=$row['email']?>" </br>
+    <?php endwhile;?>
+    <input type="submit" value="editer le profil">
+</form>
+
+
+</section>
+<footer class="footer">
+    <p class="footer__text__first">© Multiforme 2018 </p>
+    <p class="footer__text">Crée par <a href="https://github.com/ShAd0wInK" class="foo__text__link" target="blank_">Alexandre DELALOY</a>, <a href="https://github.com/Quentin-Aime" class="foo__text__link" target="blank_">Quentin AIME</a>, <a href="https://github.com/Kasdabs" class="foo__text__link" target="blank_">Kassandra AMBROISE</a>, <a href="https://github.com/hichemamb" class="foo__text__link" target="blank_">Hichem AMAR BENSABER</a> et <a href="https://github.com/Fabienmrqs" class="foo__text__link" target="blank_">Fabien MARQUES</a> à <a href="http://hetic.net" class="foo__text__link" target="blank_">HÉTIC</a>.</p>
+    <img src="img/logo.svg" alt="logo footer" class="footer__img">
+</footer>
+<div class="h__box__img" style="display: none"></div>
+</body>
+<script src="js/script.js"></script>
 </html>
+
+
+
+
