@@ -9,3 +9,6 @@
 * [Hichem Amar Bensaber](https://github.com/hichemamb)
 * [Fabien Marques](https://github.com/Fabienmrqs)
 
+## Sitemap :
+
+![sitemap](www/img/sitemap.png)
