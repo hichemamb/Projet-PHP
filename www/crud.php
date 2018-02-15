@@ -21,7 +21,21 @@
 			$sql_request .= $value;
 			$value === $values[count($values) - 1] ? $sql_request .= ') VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);' : $sql_request .= ', ';
 		}
-		var_dump($sql_request);
+		$stmt = $pdo->prepare($sql_request);
+		$stmt->execute($tmp);
+
+		return;
+	}
+
+	function create_post($pdo, $values, $table_of_db, $post_values)
+	{
+		$sql_request = "INSERT INTO " . $table_of_db . " (";
+		$tmp = [NULL];
+		$tmp = array_merge($tmp, array_values($post_values));
+		foreach ($values as $value) {
+			$sql_request .= $value;
+			$value === $values[count($values) - 1] ? $sql_request .= ') VALUES (?, ?, ?, ?, ?);' : $sql_request .= ', ';
+		}
 		$stmt = $pdo->prepare($sql_request);
 		$stmt->execute($tmp);
 

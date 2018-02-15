@@ -1,10 +1,11 @@
 <?php
 
 require_once "connexion.php";
-require_once "../Quentin/crud.php";
+require_once "./crud.php";
 
+    session_start();
     $tables = ['id', 'username', 'email'];
-    $stmt = read_where($bdd, $tables, 'form.users','id', 2);
+    $stmt = read_where($bdd, $tables, 'form.users','username', $_SESSION['username']);
     ?>
 
 <!DOCTYPE html>
@@ -33,12 +34,12 @@ require_once "../Quentin/crud.php";
     ?>
 <?php endif; ?>
 
-<form action="edit.php" class="post__form" style="display: flex">
+<form method="post" action="edit.php" class="post__form" style="display: flex">
     <?php while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
         <h2>Identifiant: </h2>
-        <input type="username" name="username"  class="p__form__input__id" value="<?=$row['username']?>" <br>
+        <input type="username" name="username"  class="p__form__input__id" value="<?=$row['username']?>" disabled="disabled"><br>
         <h2>Adresse mail: </h2>
-        <input type="email" name="email"  class="p__form__input__mail" value="<?=$row['email']?>" </br>
+        <input type="email" name="email"  class="p__form__input__mail" value="<?=$row['email']?>" disabled="disabled"> </br>
     <?php endwhile;?>
     <input type="submit" value="editer le profil">
 </form>

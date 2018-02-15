@@ -1,10 +1,11 @@
 <?php
 
 require_once "connexion.php";
-require_once "../Quentin/crud.php";
+require_once "./crud.php";
 
+session_start();
 $tables = ['id', 'username', 'email'];
-$stmt = read_where($bdd, $tables, 'form.users','id', 2);
+$stmt = read_where($bdd, $tables, 'form.users','username', $_SESSION['username']);
 ?>
 
 
@@ -21,6 +22,7 @@ $stmt = read_where($bdd, $tables, 'form.users','id', 2);
     <title>Informations personnelles</title>
 </head>
 <body>
+    <?= $_SESSION['username'] ?>
 <header class="header">
     <img src="img/title.svg" class="header__title">
     <p class="header__description">Informations personnelles</p>
@@ -39,7 +41,7 @@ $stmt = read_where($bdd, $tables, 'form.users','id', 2);
 <form action="doedit.php" method="post" class="post__form" style="display: flex">
     <?php while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
         <h2>Modifier votre pseudo: </h2>
-        <input type="username" name="username"  class="p__form__input__id" value="<?=$row['username']?>" <br>
+        <input type="username" name="username" class="p__form__input__id" value="<?=$row['username']?>" <br>
         <h2>modifier votre adresse mail: </h2>
         <input type="email" name="email"  class="p__form__input__mail" value="<?=$row['email']?>" </br>
     <?php endwhile;?>
