@@ -5,7 +5,6 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="icon" href="img/icon.png">
-
 		<title>Multiforme, votre plateforme multifonctionelle</title>
 	</head>
 	<body>
@@ -14,8 +13,6 @@
 			<p class="header__description">Votre plateforme multifonction</p>
 			<div class="header__box">
 				<a href="login.php" class="h__box__name"><?php
-
-
                     session_start();
                     if (isset($_SESSION['username']))
                     {
@@ -23,8 +20,6 @@
                     }
                     else
                         echo 'SE CONNECTER';
-
-
                     ?></a>
 				<img src="img/profil.svg" alt="user profil picture" class="h__box__img">
 			</div>
@@ -33,60 +28,16 @@
 			<section class="friends is-active-v">
 				<h2 class="friends__title">Ami(e)s</h2>
 				<ul class="friends__list">
-
-
 				<?php require_once './crud.php';
 				$conn = connect('members');
 				$tables = ['id', 'username'];
 				$stmt = read($conn, $tables, 'members.member_table');
 				while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
-
 					<li class="f__item">
 						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name"><?= $row['username'] ?></p>
 					</li>
 				<?php endwhile;?>
-
-<!-- 					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li>
-					<li class="f__item">
-						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
-						<p class="f__item__name">Quentin AIME</p>
-					</li> -->
 				</ul>
 			</section>
 			<section class="mainList">
@@ -101,7 +52,6 @@
 						<section class="social__overflow">
 								<?php $conn = connect('actu');
 								$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
-
 								$stmt = read($conn, $tables, 'actu.post');
 								while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
 								<div class="social__post">
@@ -118,26 +68,15 @@
 											   <input type="submit" value="supprimer">
 											</form>
 										<?php endif; ?>
-
-
 										<div class="s__box__buttons">
 											<div class="s__box__button__box">
 												<div src="img/like.svg" alt="fav button" class="s__box__like"></div>
 												<p><?=$row["nb_like"]?></p>
 											</div>
-
-
-
-
-
 											<div class="s__box__button__box">
 												<div src="img/fav.svg" alt="fav button" class="s__box__fav"></div>
 												<p><?=$row["nb_fav"]?></p>
 											</div>
-
-
-
-
 										</div>
 										<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
 
@@ -155,28 +94,20 @@
 											<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
 											<input type="submit" value="ENVOYER" class="s__box__form__submit">
 										</form>
-
-
 									</div>
 								</div>
 							<?php endwhile;?>
-
 						</section>
 						<section class="social__create">
-
-
-
-                                <?php if (isset($_SESSION['username'])) // Here we check if the user is online , if he is online he can post else he can't
-                                {
-                                echo "<p class=\"s__create__text\">Vous voulez partager une idée ?<a href=\"createpost.php\" class=\"s__create__link\">POSTER</a></p>";
-                                }
-
-                                if (!isset($_SESSION['username']))
-                                {
-                                echo "<p class=\"s__create__text\">Vous voulez partager une idée ?<a href=\"login.php\" class=\"s__create__link\">POSTER</a></p>";
-                                }
-
-                                ?>
+                        <?php if (isset($_SESSION['username'])) // Here we check if the user is online , if he is online he can post else he can't
+                            {
+                            echo "<p class=\"s__create__text\">Vous voulez partager une idée ?<a href=\"createpost.php\" class=\"s__create__link\">POSTER</a></p>";
+                            }
+                            if (!isset($_SESSION['username']))
+                            {
+                            echo "<p class=\"s__create__text\">Vous voulez partager une idée ?<a href=\"login.php\" class=\"s__create__link\">POSTER</a></p>";
+                            }
+                        ?>
 						</section>
 					</section>
 					<section id="chat" class="tab mL__chat">
@@ -202,34 +133,24 @@
 			<section class="profil">
                <h2 class="profil__title">
                    <?php
-
                    if (isset($_SESSION['username']))
                    {
                        echo $_SESSION['username'];
                    }
                    else
                        echo 'Inconnu';
-
-
                    ?>
-
                </h2>
-
 				<ul class="profil__list">
-
                     <?php if (isset($_SESSION['username'])) // Here we check if the user is online , if he is online he can post else he can't
                     {
                         echo "<a href=\"infos.php\" class=\"p__list__item\">Mes informations</a>";
                     }
-
                     if (!isset($_SESSION['username']))
                     {
                         echo "<a href=\"login.php\" class=\"p__list__item\">Mes informations</a>";
                     }
-
                     ?>
-
-
 				<!--
 <a href="#" class="p__list__item">Mes favoris</a>
 -->
@@ -244,9 +165,7 @@
                     {
                         echo " ";
                     }
-
                     ?>
-
 				</ul>
 			</section>
 		</section>
