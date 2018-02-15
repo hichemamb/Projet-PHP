@@ -1,10 +1,11 @@
 <?php
 
 require_once "connexion.php";
-require_once "../Quentin/crud.php";
+require_once "crud.php";
+
 
     $tables = ['id', 'username', 'email'];
-    $stmt = read_where($bdd, $tables, 'form.users','id', 2);
+    $stmt = read_where($bdd, $tables, 'form.users','id', 1);
     ?>
 
 <!DOCTYPE html>
@@ -54,7 +55,3 @@ require_once "../Quentin/crud.php";
 </body>
 <script src="js/script.js"></script>
 </html>
-
-
-
-

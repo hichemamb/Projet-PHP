@@ -54,7 +54,6 @@
 				$stmt = read($conn, $tables, 'members.member_table');
 				while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
 
-
 					<li class="f__item">
 						<img src="img/profil_dark.svg" alt="profil pciture" class="f__item__img">
 						<p class="f__item__name"><?= $row['username'] ?></p>
@@ -117,6 +116,7 @@
 								$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
 
 								$stmt = read($conn, $tables, 'actu.post');
+								var_dump($stmt);
 								while (false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)) :?>
 								<div class="social__post">
 									<img src="img/profil_dark.svg" alt="post profil img" class="s__post__img">
@@ -147,7 +147,7 @@
 
 										</div>
 										<h2 class="s__box__form__title">Commentaire: <img src="img/triangle.svg" alt="" class="s__box__form__triangle"></h2>
-										
+
 										<div class="comments">
 											<div class="comment">
 												<h3 class="comment__user"><?=$row["user"]?></h3>
@@ -162,8 +162,8 @@
 											<input type="text" class="s__box__form__message" placeholder="Ex: Oh wow">
 											<input type="submit" value="ENVOYER" class="s__box__form__submit">
 										</form>
-										
-										
+
+
 									</div>
 								</div>
 							<?php endwhile;?>
@@ -171,8 +171,9 @@
 						</section>
 						<section class="social__create">
 
-                                // Here we check if the user is online , if he is online he can post else he can't .
-                                <?php if (isset($_SESSION['username']))
+
+
+                                <?php if (isset($_SESSION['username'])) // Here we check if the user is online , if he is online he can post else he can't
                                 {
                                 echo "<p class=\"s__create__text\">Vous voulez partager une idée ?<a href=\"createpost.php\" class=\"s__create__link\">POSTER</a></p>";
                                 }
@@ -209,8 +210,20 @@
 				<h2 class="profil__title">Inconnu</h2>
 				<ul class="profil__list">
 
-					<a href="infos.php" class="p__list__item">Mes informations</a>
-				<!--	
+                    <?php if (isset($_SESSION['username'])) // Here we check if the user is online , if he is online he can post else he can't
+                    {
+                        echo "<a href=\"infos.php\" class=\"p__list__item\">Mes informations</a>";
+                    }
+
+                    if (!isset($_SESSION['username']))
+                    {
+                        echo "<a href=\"login.php\" class=\"p__list__item\">Mes informations</a>";
+                    }
+
+                    ?>
+
+
+				<!--
 <a href="#" class="p__list__item">Mes favoris</a>
 -->
                     <?php

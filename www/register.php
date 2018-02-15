@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -98,7 +98,7 @@
                     // He we just do a redirection to login page , that's means that the register done
                     header("Location: login.php?success");
 
-                 /* On the echo , we use JavaScript just the show the messages to a PopUp  */
+                 /* On the echo , we use JavaScript just to show the messages to a PopUp  */
                 } else echo '<script type="text/javascript">window.alert("Le pseudo ou le mail est déja utilisé");</script>';
 
             } else echo '<script type="text/javascript">window.alert("Les mots de passes ne sont pas identiques");</script>';
