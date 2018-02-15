@@ -85,11 +85,13 @@
 		return;
 	}
 
-	function delete($pdo, $table_of_db, $id, $where, $where_value)
+	function delete($pdo, $table_of_db, $id)
 	{
-		$sql_request = "DELETE FROM " . $table_of_db . " WHERE " . $where . "='" . $where_value . "';";
+		$sql_request = "DELETE FROM " . $table_of_db . " WHERE id='" . $id . "';";
 		$stmt = $pdo->prepare($sql_request);
 		$stmt->execute();
+
+		return;
 	}
 
 ?>
