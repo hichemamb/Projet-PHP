@@ -26,7 +26,7 @@
 		</form>
 		<?php
 
-			require_once "./crud.php";
+			require_once "../www/crud.php";
 
 			$conn = connect('actu');
 			$tables = ['id', 'name', 'link', 'description', 'nb_like', 'nb_fav', 'nb_comments', 'tags', 'comments', 'liked', 'faved', 'date', 'user'];
