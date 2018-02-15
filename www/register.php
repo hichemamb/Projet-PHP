@@ -18,8 +18,8 @@
 </header>
 <section class="post">
     <nav class="post__tabs">
-        <a href="#signin" class="p__tabs__link signin is-active">Se connecter</a>
-        <a href="#signup" class="p__tabs__link signup">S'inscrire</a>
+        <a href="#signin" class="p__tabs__link signin">Se connecter</a>
+        <a href="#signup" class="p__tabs__link signup is-active">S'inscrire</a>
 
     </nav>
     <form action="login.php" method="post" class="post__form signin " id="signin">
@@ -58,7 +58,7 @@
 <?php
 
 
-    if(isset($_POST['submit']))  /* Check if the register button is clicked */
+    if(isset($_POST['submit']))  /* Check if the register button is clicked  */
     {
         $username = $_POST['username']; /* Here for each variables , we stock what the user wrote in the input */
         $password = $_POST['password'];
@@ -68,38 +68,38 @@
         // Check if all the input are not empty
         if ((isset($username)) && !empty($username) && (isset($password)) && !empty($password) && (isset($password2)) && !empty($password2)&& (isset($email)) && !empty($email))
         {
-            // Check if the username is less than 4 and more than 12 characters
+            // Check if the username is less than 4 and more than 12 characters , if not we will show an error message
             if(strlen($username)>4 && strlen($username) <12)
 
             {
-            // Check if the password are the same
+            // Check if the password are the same , if not we will show an error message
             if($password==$password2)
             {
-                // Here we securise the password with an algo , it's a password hash to prevent hacking
-                $password = password_hash($_POST['password'],PASSWORD_BCRYPT);
-                // Here we include " connexion.php " which is the connexion to us data base
+
+                $password = sha1($password);
+                // Here we include " connexion.php " which is the connexion to us data base on which we use a try / catch
                 require_once "connexion.php";
 
-                // Here we make a request which check if there is an username or a email in the database which match with those written in the input
+                /* Here we make a request which checks if there is a username or an email in the database which matches with those written in the input.
+                In order, to do it we use the concept of prepared request , which is like a compiled model on which we can adapt by using variables for parameters .
+                */
                 $ver = $bdd->prepare("SELECT * FROM users WHERE username='$username' OR email='$email'");
-                $ver->execute();
-                $count = $ver->fetchColumn();
+                $ver->execute(); // Here we simply , execute the request we just prepared before
+                $count = $ver->fetchColumn(); // Here we stock the number of the row which matches with the id of the username or email information just read before
 
-                if ($count == 0)
+                if ($count == 0) /* Here , if the row number is equal to 0 , it means that's there isn't a username or an email in the database , so we can enter in the condition , but if $count is > 0 then we show an error message to say that username or email are already use*/
                 {
-
+                    // Here we again use the prepared concept but now to insert in us database the register informations
                     $req = $bdd->prepare('INSERT INTO users(id,username,password,email) VALUES(NULL, :username, :password, :email)');
                     $req->execute(array(
                         'username' => $username,
                         'password' => $password,
                         'email' => $email));
-
+                    // He we just do a redirection to login page , that's means that the register done
                     header("Location: login.php?success");
 
-
+                 /* On the echo , we use JavaScript just the show the messages to a PopUp  */
                 } else echo '<script type="text/javascript">window.alert("Le pseudo ou le mail est déja utilisé");</script>';
-
-
 
             } else echo '<script type="text/javascript">window.alert("Les mots de passes ne sont pas identiques");</script>';
 

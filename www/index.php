@@ -170,7 +170,19 @@
 
 						</section>
 						<section class="social__create">
-							<p class="s__create__text">Vous voulez partager une idée ? <a href="createpost.php" class="s__create__link">POSTER</a></p>
+
+                                // Here we check if the user is online , if he is online he can post else he can't .
+                                <?php if (isset($_SESSION['username']))
+                                {
+                                echo "<p class=\"s__create__text\">Vous voulez partager une idée ?<a href=\"createpost.php\" class=\"s__create__link\">POSTER</a></p>";
+                                }
+
+                                if (!isset($_SESSION['username']))
+                                {
+                                echo "<p class=\"s__create__text\">Vous voulez partager une idée ?<a href=\"login.php\" class=\"s__create__link\">POSTER</a></p>";
+                                }
+
+                                ?>
 						</section>
 					</section>
 					<section id="chat" class="tab mL__chat">
@@ -210,7 +222,7 @@
 
                     if (!isset($_SESSION['username']))
                     {
-                        echo "<a href='index.php' class='p__list__item'>Se déconnecter</a>";
+                        echo " ";
                     }
 
                     ?>
