@@ -330,6 +330,8 @@
    .s__box {
       display: flex;
       flex-direction: column;
+      margin-left: 25px;
+      width: 100%;
    }
    .s__post__img {
       width: 75px;
@@ -338,9 +340,6 @@
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-   }
-   .s__box {
-      margin-left: 25px;
    }
    .s__box__title {
       font-size: 2em;
@@ -430,6 +429,8 @@
    }
    .comments {
     /* padding: 15px 1px 15px 12px; */
+         width: 600px;
+         width: 100%;
         margin: 0 0px 0px 25px;
         display: none;
         flex-direction: column;
