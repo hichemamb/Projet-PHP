@@ -50,7 +50,7 @@
 		require_once "./crud.php";
 		
 		$conn = connect('actu');
-					$tables = ['id', 'name', 'link', 'description', 'tags'];
+					$tables = ['id', 'name', 'description', 'link', 'tags'];
 		if (isset($_POST["title"]) === true && empty($_POST["title"]) === false) {
 			create_post($conn, $tables, 'actu.post', $_POST);
 		}
