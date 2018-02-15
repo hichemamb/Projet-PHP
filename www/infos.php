@@ -18,12 +18,10 @@
 		</header>
 		<section class="post">
 			<form action="" class="post__form" style="display: flex">
-				<h2>Indentifiant: </h2>
-				<input type="text" name="username" placeholder="Ex: Bunkermaster" class="p__form__input__id"><br>
+                <h2>Indentifiant:</h2>
+                <input type=\"text\" name=\"username\" placeholder=\"Ex: Bunkermaster\" class=\"p__form__input__id\"><br>";
 				<h2>Adresse mail: </h2>
-				<input type="email" name="mail" placeholder="Ex: maclinux@pc.com" class="p__form__input__mail"></br>
-				
-				
+                <input type=\"text\" name=\"email\" placeholder=\"Ex: Bunkermaster\" class=\"p__form__input__id\"><br>";
 			</form>
 		</section>
 		<footer class="footer">
