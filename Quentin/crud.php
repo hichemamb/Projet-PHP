@@ -41,6 +41,19 @@
 		return $stmt;
 	}
 
+	function read_where($pdo, $values, $table_of_db, $where, $where_value)
+	{
+		$sql_request = "SELECT ";
+		foreach ($values as $value) {
+			$sql_request .= $value;
+			$value === $values[count($values) - 1] ? $sql_request .= ' FROM ' . $table_of_db . " WHERE " . $where . " = '" . $where_value . "';" : $sql_request .= ', ';
+		}
+		$stmt = $pdo->prepare($sql_request);
+		$stmt->execute();
+
+		return $stmt;
+	}
+
 	function update($pdo, $values, $table_of_db, $post_values/*, id*/)
 	{
 		$sql_request = "UPDATE " . $table_of_db . " SET ";
