@@ -1,6 +1,7 @@
 <?php
 
 require_once "connexion.php";
+
 require_once "./crud.php";
 
     session_start();
@@ -41,7 +42,7 @@ require_once "./crud.php";
         <h2>Adresse mail: </h2>
         <input type="email" name="email"  class="p__form__input__mail" value="<?=$row['email']?>" disabled="disabled"> </br>
     <?php endwhile;?>
-    <input type="submit" value="editer le profil">
+    <input type="submit" value="Éditer le profil" class="p__form__submit">
 </form>
 
 
@@ -55,7 +56,3 @@ require_once "./crud.php";
 </body>
 <script src="js/script.js"></script>
 </html>
-
-
-
-

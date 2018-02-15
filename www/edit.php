@@ -45,7 +45,7 @@ $stmt = read_where($bdd, $tables, 'form.users','username', $_SESSION['username']
         <h2>modifier votre adresse mail: </h2>
         <input type="email" name="email"  class="p__form__input__mail" value="<?=$row['email']?>" </br>
     <?php endwhile;?>
-    <input type="submit" value="Enregistrer les modifications">
+    <input type="submit" value="Enregistrer les modifications" class="p__form__submit">
 </form>
 
 
