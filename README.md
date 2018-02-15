@@ -11,5 +11,5 @@
 
 ## Sitemap :
 
-![sitemap](www/img/sitemap.png)
+![sitemap](https://lh3.googleusercontent.com/gELH1dH33V52kP8nvGNnau7O2nFIjOYr9hIovZ7XDbnUXVQ2-EP4knODbHbbrgIgdsX7ka2JU2iRSmuvyPyM=w2560-h1318-rw)
 
