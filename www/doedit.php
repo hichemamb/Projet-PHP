@@ -1,11 +1,6 @@
 
 <?php
-/**
- * Created by PhpStorm.
- * User: fabii
- * Date: 15/02/2018
- * Time: 12:37
- */
+
 session_start();
 require_once "connexion.php";
 require_once "./crud.php";

@@ -7,7 +7,7 @@
  */
 session_start();
 require_once "connexion.php";
-require_once "./crud.php";
+require_once "crud.php";
 /*$tables = ['id', 'username'];
 $stmt = read_where($bdd, $tables, 'actu.post', 'username', $_SESSION['username']);
 
