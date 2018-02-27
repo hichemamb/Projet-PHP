@@ -82,7 +82,7 @@ if(isset($_POST['submit']))  // If the connexion button is clicked then we can e
         // Here we include " connexion.php " which is the connexion to us data base on which we use a try / catch
         require_once "connexion.php";
 
-        echo '<script type="text/javascript">window.alert(<?= var_dump($bdd) ?>);</script>';
+
 
         $password = sha1($password);
 
